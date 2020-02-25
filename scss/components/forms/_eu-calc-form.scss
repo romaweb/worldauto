@@ -19,6 +19,10 @@
   margin-bottom: $global-margin / 1.5;
 }
 
+.eu-calc-form__btn-container  {
+  width: 100%;
+}
+
 @include breakpoint(xsmall) {
 
   .eu-calc-form__field-wrap {
@@ -33,6 +37,11 @@
 
   .eu-calc-form__field  {
     width: span(7);
+  }
+
+  .eu-calc-form__btn-container  {
+    margin-left: span(5);
+    width: span(7 wide);
   }
 
 }
@@ -72,10 +81,6 @@
 
   .eu-calc-form__results-table-item {
     width: 55%;
-  //   width: span(6);
-  //   .results-table__cell {
-  //     width: span(1);
-  //     }
   }
 
 }
