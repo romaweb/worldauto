@@ -1,0 +1,167 @@
+// Table
+//==========================
+//
+
+
+.results-table {
+	
+	width: 100%;
+	margin-bottom: $global-margin;
+	background-color: $white;
+
+	// &:last-child {
+	// 	margin-bottom: 0;
+	// }
+}
+
+.results-table__wrap {
+	overflow-x: auto;
+}
+
+.results-table__item {
+	width: 100%;
+	background-color: $white;
+	border-collapse: collapse;
+}
+
+.results-table__heading {
+	@include sub-heading();
+	text-align: left;
+  padding: $global-padding / 3 gutter() / 2;
+  color: $white;
+  text-transform: uppercase;
+	font-size: 2rem;
+	background-color: $primary-color;
+	
+	&--secondary {
+		background-color: $secondary-accent-color;
+	}
+
+}
+
+.results-table__event-name {
+  padding: $global-padding / 4 gutter() / 2;
+  display: block;
+  font-size: 2rem;
+	text-align: center;
+	background-color: $secondary-accent-color;
+  color: $white;
+}
+
+.results-table__row-heading {
+	border-bottom: 3px solid $secondary-color;
+}
+
+.results-table__cell-heading {
+	padding: $global-padding / 3 gutter() / 2;
+	text-align: left;
+	font-weight: $global-weight-bold;
+	text-transform: uppercase;
+}
+
+.results-table__row {
+	transition: $global-transition;
+
+	a {
+		color: $black;
+		text-decoration: none;
+		transition: $global-transition;
+
+		&:hover {
+			color: $white;
+		}
+	}
+
+	// &:nth-child(odd) {
+	// 	background-color: $light-gray;
+	// }
+
+	&:nth-child(even) {
+		background-color: $light-gray;
+	}
+
+	&:hover {
+		background-color: $primary-accent-color;
+		color: $white;
+
+		svg {
+			fill: $white;
+			transition: $global-transition;
+		}
+
+
+	}
+
+
+
+}
+
+.results-table__cell {
+	font-weight: $global-weight-bold;
+	padding: $global-padding / 3 gutter() / 2;
+
+	&:first-child {
+		min-width: 100px;
+	}
+
+}
+
+.results-table__team-place {
+  display: flex;
+  align-items: center;
+}
+
+.results-table__place-icon {
+  display: block;
+  margin-right: gutter() / 10;
+  width: 20px;
+  height: 20px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: $secondary-color;
+    // fill: $primary-color;
+  }
+}
+
+.results-table__place-number {
+  // @include sub-heading();
+  // text-transform: uppercase;
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  // color: $primary-accent-color;
+  // color: $secondary-color;
+	// font-weight: $global-weight-bold;
+	
+	sup {
+		text-decoration: underline;
+	}
+}
+
+.results-table__btn-wrap {
+	padding: $global-padding / 2 gutter() / 2;
+	background-color: $white;
+}
+
+@include breakpoint(small) {
+
+	.results-table__heading {
+		padding: $global-padding / 2 gutter() / 2;
+		font-size: 2.2rem;
+	}
+
+	.results-table__event-name {
+		font-size: 2.2rem;
+	}
+
+}
+
+@include breakpoint(large) {
+
+	// .results-table {
+	// 	margin-bottom: 0;
+	// }
+
+}

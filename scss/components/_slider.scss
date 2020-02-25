@@ -1,0 +1,122 @@
+// Slider
+// ==========================
+//
+
+.slider {
+	padding: $global-padding 0;
+	background: $medium-gray url('../img/slider/slide-1.jpg') center top no-repeat;
+	background-size: cover;
+
+
+	&--no-js {
+
+		.slider__item {
+
+			&:first-child {
+				display: block;
+				animation: none;
+			}
+		} 
+		
+	}
+}
+
+.slider__wrap {
+	@include container();
+}
+
+.slider__item {
+	display: none;
+	height: 200px;
+	overflow: hidden;
+	background-color: rgba($white, .85);
+	padding: $global-padding / 2;
+	width: span(12);
+	animation: opacity 10s infinite;
+
+
+	&--active {
+		display: block;
+
+	}
+}
+
+.slider__heading {
+	@include heading();
+	margin-bottom: $global-margin / 4;
+	font-size: 2.6rem;
+}
+
+.slider__descr {
+	font-size: 1.5rem;
+	margin-bottom: $global-margin / 2;
+}
+
+@include breakpoint(xsmall) {
+
+	.slider__item {
+		width: span(9);
+	}
+
+	.slider__heading {
+		font-size: 2.8rem;
+	}
+
+}
+
+@include breakpoint(small) {
+
+	.slider {
+		padding: $global-padding * 2 0;
+	}
+
+	.slider__item {
+		width: span(8);
+
+	}
+
+	.slider__heading {
+		font-size: 3rem;
+	}
+
+}
+
+@include breakpoint(medium) {
+	
+	.slider {
+		padding: $global-padding * 2.5 0;
+	}
+
+	.slider__item {
+		width: span(7);
+		padding: $global-padding;
+		height: 240px;
+	}
+
+	.slider__heading {
+		font-size: 3.4rem;
+	}
+
+}
+
+@include breakpoint(large) {
+
+	.slider {
+		padding: $global-padding * 3.5 0;
+	}
+
+	.slider__wrap {
+		// @include container(1170px);
+		@include container();
+	}
+
+	.slider__heading {
+		font-size: 3.6rem;
+	}
+
+	.slider__item {
+		width: span(6);
+	}
+
+
+}

@@ -1,0 +1,67 @@
+// Calc Form
+// ==========================
+//
+
+.calc-form {
+	margin-bottom: $global-margin;
+}
+
+.calc-form__field-wrap {
+	margin-bottom: $global-margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.calc-form__label {
+	color: $dark-gray;
+	margin-bottom: $global-margin / 10;
+}
+
+@include breakpoint(xsmall) {
+	
+	.calc-form__field-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.calc-form__label {
+		width: span(4);
+		margin-bottom: 0;
+	}
+
+	.customs-calc__field {
+		width: span(8);
+	}
+
+}
+
+@include breakpoint(medium) {
+
+	.calc-form__field-wrap {
+		display: block;
+		margin-bottom: 0;
+	}
+
+	.calc-form__label {
+		width: 100%;
+		display: block;
+	}
+
+	.customs-calc__field {
+		width: 100%;
+	}
+
+	.calc-form {
+		display: flex;
+		align-items: top;
+		justify-content: space-between;
+	}
+
+	.calc-form__field-wrap {
+		width: span(4);
+	}
+
+}

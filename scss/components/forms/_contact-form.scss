@@ -1,0 +1,68 @@
+// Contact Form
+// ==========================
+//
+
+.contact-form {
+	width: 100%;
+}
+
+.contact-form__field {
+	position: relative;
+
+	p {
+		margin: 0;
+		padding: 0 gutter() / 6;
+		width: 100%;
+		font-size: $small-font-size;
+		position: absolute;
+		bottom: -25px;
+		text-align: left;
+		color: $white;
+		background-color: $primary-color;
+	}
+
+	.help-block-error {
+		background-color: $error-color;
+	}
+
+	&--half {
+
+		&:first-child {
+			margin-bottom: $global-margin / 1.5;
+		}
+		
+	}
+}
+
+.contact-form__field-wrap {
+	margin-bottom: $global-margin / 1.5;
+}
+
+.contact-form__field {
+	width: 100%;
+	// margin-bottom: $global-margin / 1.5;
+}
+
+@include breakpoint(small) {
+
+	.contact-form__field-wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.contact-form__field {
+
+		&--half {
+			width: span(6);
+
+			&:first-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+
+}
+
+
+

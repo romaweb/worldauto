@@ -1,0 +1,134 @@
+// Category
+//==========================
+//
+
+.category {
+	margin-bottom: $global-margin -  $global-margin / 2;
+}
+
+.category__wrap {
+	display: flex;
+	flex-wrap: wrap;
+	// background: susy-svg-grid() no-repeat scroll;
+}
+
+.category__item {
+	display: flex;
+	flex: 0 1 auto;
+	width: span(6);
+	align-items: center;
+	margin-right: gutter();
+	margin-bottom: $global-margin / 2;
+	background-color: $light-gray;
+
+	&:nth-child(2n) {
+		margin-right: 0;
+	}
+
+	&:hover img {
+		opacity: 0.8;
+	}
+
+	&:hover .category__item-name {
+		color: $primary-color;
+	}
+}
+
+.category__item-img {
+	display: block;
+	padding: $global-padding / 8 gutter();
+	flex: 1 0 auto;
+	width: span(5);
+	
+	img {
+		@include responsive-img();
+		transition: $global-transition;
+	}
+}
+
+.category__item-name {
+	flex: 1 0 auto;
+	width: span(7);
+	display: block;
+	margin: 0;
+	word-wrap: break-word;
+	color: $dark-beige;
+	font-weight: normal;
+	transition: $global-transition;
+}
+
+@include breakpoint(xsmall) {
+
+	.category__item {
+		width: span(4);
+		
+		&:nth-child(2n) {
+			margin-right: gutter();
+		}
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+}
+
+@include breakpoint(small) {
+
+	.category {
+		margin-bottom: $global-margin * 1.5 - $global-margin;
+	}
+
+	.category__item {
+		width: span(3);
+		margin-bottom: $global-margin;
+		
+		&:nth-child(2n) {
+			margin-right: gutter();
+		}
+
+		&:nth-child(3n) {
+			margin-right: gutter();
+		}
+
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+	}
+
+	.category__item-name {
+		font-size: 1.8rem;
+	}
+}
+// 	@include breakpoint(small) {
+		
+// 		.category {
+// 			margin-bottom: $global-margin * 1.5 - $global-margin;
+// 		}
+
+// 		.category__item {
+// 			margin-bottom: $global-margin;
+// 		}
+// 	}
+
+// 	@include breakpoint(medium) {
+
+// 		.category__item {
+// 			width: 14.16%;
+// 			font-size: 1.6rem;
+		
+// 			&:nth-child(2n) {
+// 				margin-right: 3%;
+// 			}
+	
+// 			&:nth-child(3n) {
+// 				margin-right: 3%;
+// 			}
+	
+// 			&:nth-child(4n) {
+// 				margin-right: 0;
+// 			}
+
+// 		}
+// 	}
+
+// }

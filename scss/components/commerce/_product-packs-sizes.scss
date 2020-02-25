@@ -1,0 +1,25 @@
+// Product Packs Sizes
+// ==========================
+//
+
+.product-packs-sizes {
+	margin: $global-margin / 4 0;
+}
+
+.product-packs-sizes__wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product-packs-sizes__heading {
+	margin-bottom: $global-margin / 8;
+	display: block;
+}
+
+.product-packs-sizes__item {
+	display: block;
+	margin-right: $global-margin / 4;
+	margin-bottom: $global-margin / 2;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+}

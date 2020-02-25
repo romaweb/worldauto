@@ -1,0 +1,45 @@
+.instagram {
+  padding: $global-padding  0 $global-padding - gutter();
+  position: relative;
+  
+  background: rgba($dark-gray, .8);
+  // padding: $global-padding 0;
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: $black url("../img/instagram-bg.jpg") center center no-repeat;
+    background-size: cover;
+  }
+}
+
+.instagram__wrap {
+  @include container();    
+}
+
+
+
+
+@include breakpoint(small) {
+
+  .instagram {
+    padding: $global-padding * 1.5 0 $global-padding * 1.5 - gutter();
+  }
+
+  
+}
+
+@include breakpoint(xlarge) {
+
+  .instagram {
+    padding: $global-padding * 2 0 $global-padding * 2 - gutter();
+  }
+
+}

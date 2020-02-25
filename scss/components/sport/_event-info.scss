@@ -1,0 +1,121 @@
+// Event Info
+// ==========================
+//
+
+.event-info {
+  margin-bottom: $global-margin;
+  background-color: $white;
+}
+
+.event-info__container {
+  padding: $global-padding / 2 gutter() / 2;
+}
+
+.event-info__heading {
+  @include sub-heading();
+  padding: $global-padding / 3 gutter() / 2;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  background-color: $secondary-color;
+}
+
+.event-info__item {
+  padding: $global-padding / 4 gutter() / 2;
+  background-color: $primary-accent-color;
+  margin-bottom: $global-margin / 3;
+
+  &:nth-child(odd) {
+    background-color: $secondary-accent-color;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.event-info__item-name {
+  width: 100%;
+  display: block;
+  margin-bottom: $global-margin / 8;
+  color: $white;
+  // font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+	font-weight: normal;
+  font-family: $sub-heading-font-family;
+  line-height: $heading-line-height;
+}
+
+.event-info__item-descr {
+  width: 100%;
+  display: block;
+	color: $white;
+	font-weight: $global-weight-extra-bold;
+  font-size: 2.6rem;
+  text-align: center;
+	line-height: $heading-line-height;
+}
+
+
+@include breakpoint(xsmall) {
+
+  .event-info__items-container {
+    // display: flex;
+    // flex-wrap: wrap;
+  }
+
+}
+
+@include breakpoint(small) {
+
+  .event-info__items-container {
+    display: flex;
+    flex-wrap: wrap;
+    // align-items: center;
+    justify-content: space-between;
+  }
+
+  .event-info__item {
+    width: span(6);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .event-info__heading  {
+    font-size: 2.2rem;
+    padding: $global-padding / 2 gutter() / 2;
+  }
+
+}
+
+@include breakpoint(large) {
+
+  .event-info__items-container {
+    display: block;
+  }
+
+  .event-info__item {
+    width: span(12);
+    padding: $global-padding / 2 gutter() / 2;
+
+    &:nth-last-child(2) {
+      margin-bottom: $global-margin / 3;;
+    }
+  }
+
+  .event-info__item-name {
+    font-size: 1.8rem;
+  }
+
+  .event-info__item-descr {
+    font-size: 4rem;
+  }
+}

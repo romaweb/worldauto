@@ -1,0 +1,92 @@
+// Authentication Form
+// ==========================
+//
+
+.authentication-form {
+	background-color: $light-gray;
+	padding: $global-padding / 2;
+}
+
+.authentication-form__field {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: $global-margin;
+
+	&--radio {
+		justify-content: flex-start;
+		margin-bottom: $global-margin / 2;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	p {
+		width: 100%;
+		font-size: $small-font-size;
+		position: absolute;
+		bottom: -20px;
+		text-align: left;
+		color: $black;
+		margin: 0;
+	}
+
+	.help-block-error {
+		color: $error-color;
+	}
+
+}
+
+.authentication-form__heading {
+	@include heading();
+	text-align: center;
+	margin-bottom: $global-margin / 3;
+	font-size: 2.2rem;
+}
+
+.authentication-form__lnk {
+	color: $primary-color;
+	transition: $global-transition;
+
+	&:hover {
+		color: $black;
+	}
+}
+
+.authentication-form__text {
+	margin: 0;
+	margin-bottom: $global-margin / 2;
+}
+
+.authentication-form__custom-radio {
+	margin-right: $global-margin;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.authentication-form__wholesale {
+	display: none;
+	margin-bottom: $global-margin;
+	animation: fade-in 1s;
+
+	&--no-js {
+		display: block;
+	}
+
+	&--active {
+		display: block;
+	}
+
+}
+
+@include breakpoint(medium)  {
+	
+	.authentication-form {
+		padding: $global-padding;
+	}
+
+}

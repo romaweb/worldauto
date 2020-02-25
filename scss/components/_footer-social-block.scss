@@ -1,0 +1,40 @@
+// Footer Social Block
+// ==========================
+//
+
+.footer-social-block {
+  width: 100%;
+  margin-bottom: $global-margin;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer-social-block__heading {
+  @include sub-heading();
+	margin-bottom: $global-margin / 2;
+	font-size: 2.2rem;
+	color: $secondary-color;
+	text-transform: uppercase;
+}
+
+@include breakpoint(small) {
+
+  // .footer-social-block {
+  //   margin-bottom: 0;
+  // }
+
+  .footer-social-block__heading {
+    font-size: 2.4rem;
+  }
+
+}
+
+@include breakpoint(large) {
+
+  .footer-social-block {
+    margin-bottom: 0;
+  }
+
+}

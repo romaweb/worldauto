@@ -1,0 +1,17 @@
+// .video {
+//   @include responsive-video();
+//   margin-bottom: $global-margin / 1.5;
+//   border: 1px solid $global-border-color;
+
+// }
+
+.video {
+  margin-bottom: $global-margin / 1.5;
+  border: 1px solid $global-border-color;
+}
+
+.video__container {
+  @include responsive-video();
+}
+
+

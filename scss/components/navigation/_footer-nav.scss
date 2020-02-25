@@ -1,0 +1,53 @@
+// Footer Navigation
+// ==========================
+//
+
+.footer-nav {
+
+}
+
+.footer-nav__list {
+	@include reset-list();
+	display: flex;
+	flex-wrap: wrap;
+	align-items: top;
+}
+
+.footer-nav__item {
+	display: block;
+	margin-right: gutter();
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	.footer-nav__item-lnk {
+		position: relative;
+		padding: $global-padding / 4 0;
+		color: $dark-gray;
+		text-decoration: none;
+		transition: $global-transition;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background-color: $primary-color;
+			transition: $global-transition;
+		}
+
+		&:hover:after {
+			width: 100%;
+		}
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+
+}

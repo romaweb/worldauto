@@ -1,0 +1,114 @@
+.team {
+  padding: $global-padding  0;
+  position: relative;
+
+ }
+  
+
+.team__decorative {
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 65px;
+  position: absolute;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 40px;
+    bottom: 19px;
+    background-color: $primary-color;
+    left: -80px;
+    box-shadow: 4px 1px 0 2px $light-gray;
+    transform: skew(-58deg, 10deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 40px;
+    bottom: 19px;
+    background-color: $primary-color;
+    right: -80px;
+    box-shadow: -4px 1px 0 2px $light-gray;
+    transform: skew(58deg, -10deg);
+  }
+
+}
+
+.team__wrap {
+  @include container(400px);
+
+  .slick-list {
+    margin: 0 -15px;
+  }
+}
+
+
+
+  .team__team-item {
+    margin: 0 gutter() / 2;
+  }
+ 
+@include breakpoint(small) {
+
+
+  .team {
+    padding: $global-padding * 1.5 0;
+  }
+
+  .team__wrap {
+    @include container(768px);
+  }
+
+  .team__decorative {
+    top: -26px;
+    height: 82px;
+  
+    &::before {
+      content: '';
+      width: 160px;
+      height: 50px;
+      bottom: 20px;
+      left: -70px;
+    }
+  
+    &::after {
+      width: 160px;
+      height: 50px;
+      bottom: 20px;
+      right: -70px;
+    }
+  
+  }
+}
+
+@include breakpoint(medium) {
+
+  .team__wrap {
+    @include container();
+  }
+
+}
+
+@include breakpoint(large) {
+
+  .team__wrap {
+    @include container(1200px);
+  }
+
+}
+
+
+@include breakpoint(xlarge) {
+
+  .team {
+    padding: $global-padding * 2  0;
+  }
+
+}

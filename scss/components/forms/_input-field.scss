@@ -1,0 +1,36 @@
+.input-field {
+	@include input-field();
+	width: 100%;
+	background-color: $light-gray;
+	padding:  $global-padding / 3.5  gutter() / 3; 
+	border-bottom: 2px solid $dark-gray;
+	color: $black;
+	// box-shadow: $global-shadow;
+
+
+	&--light {
+		border-bottom: 2px solid $light-gray;
+		background-color: transparent;
+		color: $white;
+
+		&::placeholder {
+			color: $light-gray;
+		}
+	}
+
+	&::placeholder {
+		color: $medium-gray;
+	}
+
+	&:focus {
+		border-color: $primary-color;
+	}
+}
+
+@include breakpoint(small) {
+
+	.input-field {
+		padding:  $global-padding / 3 gutter() / 2; 
+	}
+
+}

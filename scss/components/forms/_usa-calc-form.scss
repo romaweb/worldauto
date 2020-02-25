@@ -1,0 +1,174 @@
+.usa-calc-form {
+  margin-bottom: $global-margin / 1.5;
+}
+
+.usa-calc-form__field-wrap {
+  margin-bottom: $global-margin / 1.5;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  label {
+    display: block;
+    margin-bottom: $global-margin / 5;
+  }
+}
+
+.usa-calc-form__checkbox-img {
+  // width: span(4 wide);
+  width: (100% / 3);
+  flex: 1 0 auto;
+  // margin-right: gutter() / 2;
+
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $white;
+  }
+
+  &:last-child {
+
+    &::after {
+      content: none;
+    }
+
+  }
+  
+}
+
+.usa-calc-form__items-container {
+  margin-bottom: $global-margin / 1.5;
+}
+
+.usa-calc-form__fields-container {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  align-items: stretch;
+}
+
+.usa-calc-form__container-img {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0;
+
+  img {
+    @include responsive-img();
+  }
+}
+
+
+.usa-calc-form__car-content {
+  max-width: 400px;
+  margin: auto;
+  display: block;
+  margin-bottom: $global-margin / 1.5;
+}
+
+.usa-calc-form__car-img {
+  margin: 0;
+  padding: 0;
+  margin-bottom: $global-margin / 6;
+  width: 100%;
+  border: 1px solid $global-border-color;
+  // height: 200px;
+
+  img {
+    @include responsive-img();
+  }
+}
+
+.usa-calc-form__car-name {
+  @include sub-heading();
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  color: $dark-gray;
+  text-align: left;
+}
+
+@include breakpoint(small) {
+
+  // .usa-calc-form {
+  //   max-width: 768px;
+  // }
+
+  .usa-calc-form__container-img {
+    max-width: 480px;
+  }
+
+  .usa-calc-form__car-content {
+    max-width: 480px;
+  }
+
+}
+
+@include breakpoint(medium) {
+
+  .usa-calc-form__field-wrap {
+
+    label {
+      font-size: 1.6rem;
+    }
+  }
+
+
+  // .usa-calc-form__results {
+  //   display: flex;
+  // }
+
+  // .usa-calc-form__results-table {
+  //   width: 50%;
+  // }
+
+  .usa-calc-form__results-table {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .usa-calc-form__results-table-item {
+    width: 50%;
+  }
+
+  .usa-calc-form__car-name {
+    font-size: 3.8rem;
+  }
+}
+
+@include breakpoint(large) {
+
+  // .usa-calc-form__fields-container {
+  //   margin-bottom: 0;
+  // }
+
+  .usa-calc-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .usa-calc-form__items-container {
+    width: span(6);
+  }
+
+  .usa-calc-form__container-img {
+    max-width: 100%;
+  }
+
+  .usa-calc-form__car-content {
+    max-width: 100%;
+  }
+
+  // .usa-calc-form__results{
+  //   width: span(5);
+  // }
+
+}

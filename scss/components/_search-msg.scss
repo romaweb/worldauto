@@ -1,0 +1,23 @@
+.search-msg {
+  display: block;
+  margin: 0;
+  text-align: center;
+  color: $dark-gray;
+}
+
+.search-msg__request {
+  font-size: 1.8rem;
+  font-weight: $global-weight-bold;
+}
+
+@include breakpoint(small) {
+
+  .search-msg {
+    font-size: 1.8rem;
+  }
+
+  .search-msg__request {
+    font-size: 2rem;
+  }
+
+}

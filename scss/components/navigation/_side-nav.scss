@@ -1,0 +1,54 @@
+// Side Nav
+// ==========================
+//
+
+.side-nav {
+	margin-bottom: $global-margin / 2;
+}
+
+.side-nav__heading {
+	display: block;
+	margin: 0;
+	margin-bottom: $global-margin / 6;
+	font-family: inherit;
+	line-height: $heading-line-height;
+	font-weight: $global-weight-bold;
+	text-align: left;
+	font-size: 2.2rem;
+	text-transform: uppercase;
+	color: $dark-gray;
+}
+
+.side-nav__list {
+	@include reset-list();
+}
+
+.side-nav__item {
+	margin-bottom: $global-margin / 6;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.side-nav__lnk {
+	text-decoration: none;
+	transition: $global-transition;
+	color: $dark-gray;
+
+	&:hover {
+		color: $primary-color;
+	}
+
+	&--active {
+		color: $primary-color;
+	}
+}
+
+@include breakpoint(small) {
+
+	.side-nav__heading {
+		font-size: 2.4rem;
+	}
+
+}

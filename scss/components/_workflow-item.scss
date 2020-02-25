@@ -1,0 +1,39 @@
+// Workflow Item
+// ==========================
+//
+
+.workflow-item {
+	padding: $global-padding / 6 gutter() / 2;
+	margin-bottom: $global-margin / 2;
+	background-color: $light-gray;
+}
+
+.workflow-item__counter {
+	@include heading();
+	font-size: 5rem;
+	color: $primary-color;
+}
+
+.workflow__item-text {
+	margin: 0;
+	// font-size: 1.8rem;
+	color: $dark-gray;
+	// font-weight: $global-weight-bold;
+
+	p {
+		margin: 0;
+	}
+}
+
+@include breakpoint(small) {
+
+	.workflow__item-text {
+		font-size: 1.8rem;
+		line-height: $heading-line-height;
+	}
+
+	.work-flow__item-counter {
+		font-size: 7rem;
+	}
+
+}

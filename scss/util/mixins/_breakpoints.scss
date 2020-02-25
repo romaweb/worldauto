@@ -1,0 +1,13 @@
+// Breakpoints
+// ==========================
+//
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+	@media only screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+	  @content;
+	}
+  } @else {
+	@error 'Empty value for `#{$breakpoint}` ';
+  }
+}

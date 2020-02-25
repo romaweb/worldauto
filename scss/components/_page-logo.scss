@@ -1,0 +1,46 @@
+// Page Logo
+// ==========================
+//
+
+
+.page-logo {
+	width: 110px;
+	display: block;
+
+	img {
+		@include responsive-img();
+	}
+}
+
+@include breakpoint(xsmall) {
+
+  .page-logo {
+    width: 120px;
+  }
+
+}
+
+@include breakpoint(medium) {
+
+  .page-logo {
+    margin-right: gutter();
+    width: 140px;
+  }
+
+}
+
+@include breakpoint(large) {
+
+  .page-logo {
+    width: 160px;
+  }
+
+}
+
+@include breakpoint(xxlarge) {
+
+  .page-logo {
+    width: 180px;
+  }
+
+}

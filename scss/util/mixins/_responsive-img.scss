@@ -1,0 +1,11 @@
+// Responsive Img
+//==========================
+//
+
+@mixin responsive-img ($display: inline-block) {
+  display: $display;
+  max-width: 100%;
+  vertical-align: bottom;
+  height: auto;
+}
+

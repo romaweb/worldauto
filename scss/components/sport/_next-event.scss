@@ -1,0 +1,77 @@
+// Next Event
+// ==========================
+//
+
+.next-event {
+  width: 100%;
+  padding-bottom: $global-padding;
+  margin-bottom: $global-margin;
+  background-color: $white;
+}
+
+.next-event__container {
+  padding: 0 gutter() / 2;
+}
+
+.next-event__heading {
+  @include sub-heading();
+  margin-bottom: $global-margin;
+  padding: $global-padding / 3 gutter() / 2;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  background-color: $secondary-accent-color;
+}
+
+.next-event__event-name {
+  margin-bottom: $global-margin / 2;
+  display: block;
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: $heading-line-height;
+  font-weight: $global-weight-bold;
+  color: $primary-color;
+}
+
+.next-event__promo-text {
+  @include heading();
+  margin-bottom: $global-margin / 2;
+  // display: block;
+  text-align: center;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  // line-height: $heading-line-height;
+  // font-weight: $global-weight-bold;
+  color: $secondary-accent-color;
+}
+
+@include breakpoint(xsmall) {
+
+  .next-event__event-name {
+    font-size: 3rem;
+  }
+
+  .next-event__promo-text {
+    font-size: 3rem;
+  }
+
+}
+
+@include breakpoint(small) {
+ 
+
+  .next-event__heading {
+    font-size: 2.2rem;
+    padding: $global-padding / 2 gutter() / 2;
+  }
+
+  .next-event__event-name {
+    font-size: 4rem;
+    margin-bottom: $global-margin;
+  }
+
+  .next-event__promo-text {
+    font-size: 4rem;
+    margin-bottom: $global-margin;
+  }
+}

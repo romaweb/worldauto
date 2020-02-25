@@ -1,0 +1,152 @@
+// User Nav
+// ==========================
+//
+
+.user-nav {
+
+}
+
+.user-nav__pages {
+	@include reset-list();
+	margin-bottom: $global-margin;
+}
+
+.user-nav__logined {
+	@include reset-list();
+}
+
+.user-nav__item {
+	margin-bottom: $global-margin / 3;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.user-nav__logined-item {
+	margin-bottom: $global-margin / 3;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.user-nav__lnk {
+	display: block;
+	color: $dark-beige;
+	display: flex;
+
+	span {
+		color: $dark-beige;
+		text-decoration: none;
+		flex: 0 1 auto;
+	}
+
+	&:hover  .user-nav__icon {
+		fill: $dark-beige;
+	}
+
+	&:hover span {
+		color: $medium-beige;
+	}
+}
+
+
+.user-nav__icon{
+	width: 20px;
+	height: 20px;
+	fill: $medium-beige;
+	margin-right: 5px;
+	flex: 0 1 auto;
+	transition: $global-transition;
+}
+
+@include breakpoint(xsmall) {
+
+	.user-nav {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.user-nav__pages {
+		margin-bottom: 0;
+	}
+
+	.user-nav__logined {
+		flex: 0 1 auto;
+	}
+}
+
+@include breakpoint(small) {
+
+	.user-nav__pages {
+		display: flex;
+		margin-bottom: $global-margin;
+	}
+
+	.user-nav__item {
+		flex: 0 1 auto;
+		margin-right: gutter() * 3;
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	.user-nav__logined-item {
+		// flex: 0 1 auto;
+		// margin-right: gutter();
+
+		// &:last-child {
+		// 	margin-right: 0;
+		// }
+	}
+}
+
+// @include breakpoint(medium) {
+
+// 	.user-nav__pages {
+// 		width: span(9);
+// 	}
+
+// 	.user-nav__logined {
+// 		display: flex;
+// 		width: span(3);
+// 	}
+
+// 	.user-nav__logined-item {
+// 		flex: 0 1 auto;
+// 		margin-right: gutter();
+
+// 		&:last-child {
+// 			margin-right: 0;
+// 		}
+// 	}
+// }
+
+// @include breakpoint(large) {
+
+// 	.user-nav__logined {
+// 		display: block;
+// 	}
+
+// 	.user-nav__pages {
+// 		display: block;
+// 		margin-bottom: $global-margin;
+// 	}
+
+// 	.user-nav {
+// 		display: block;
+// 	}
+// }
+
+@include breakpoint(medium) {
+
+	.user-nav {
+		display: block;
+	}
+
+	.user-nav__pages {
+		display: block;
+	}
+}

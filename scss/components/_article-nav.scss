@@ -1,0 +1,85 @@
+//  Article Nav
+// ==========================
+//
+
+.article-nav {
+	margin-bottom: $global-margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&--forum {
+
+		.article-nav__item a {
+			color: $light-gray;
+		}
+	}
+}
+
+.article-nav__list {
+	@include reset-list();
+}
+
+.article-nav__item {
+	margin-bottom: $global-margin / 4;
+
+	a {
+		position: relative;
+		display: block;
+		padding-left: $global-padding / 4;
+		color: $medium-beige;
+		
+		&:after {
+			content: "";
+			display: block;
+			width: 7px;
+			height: 7px;
+			position: absolute;
+			left: 0;
+			top: 8px;
+			border-radius: 100%;
+			background-color: $primary-color;
+		}
+
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@include breakpoint(xsmall) {
+
+	.article-nav {
+		flex: 0 1 auto;
+		width: span(6);
+		margin-bottom: 0;
+
+		&--forum {
+			width: span(12);
+		}
+	}
+}
+
+@include breakpoint(small) {
+
+	.article-nav {
+		// flex: none;
+		// width: 100%;
+		// margin-bottom: $global-margin * 1.5;
+	}
+} 
+
+@include breakpoint(large) {
+	
+	.article-nav {
+		flex: none;
+		width: 100%;
+		margin-bottom: $global-margin * 1.5;
+	}
+}

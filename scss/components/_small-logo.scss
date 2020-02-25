@@ -1,0 +1,12 @@
+// Small logo
+// ==========================
+//
+
+.small-logo {
+  display: block;
+  width: 100px;
+
+  img {
+    @include responsive-img();
+  }
+}

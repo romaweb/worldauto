@@ -1,0 +1,87 @@
+// .testimonials {
+//   padding: $global-padding 0 $global-padding * 2;
+//   background-color: $light-gray;
+// }
+
+.testimonials{
+  width: 100%;
+  padding: $global-padding * 1.5 0 $global-padding;
+  position: relative;
+  
+  background: rgba($dark-gray, .6);
+
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: $black url("../img/car-nav-bg.jpg") center center no-repeat;
+    background-size: cover;
+  }
+
+  
+}
+
+
+.testimonials__skewed {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 6vw;
+  fill: $white;
+}
+
+.testimonials__wrap {
+  @include container(400px);    
+}
+
+
+
+
+@include breakpoint(small) {
+
+  .testimonials {
+    // padding: $global-padding * 2 0 $global-padding * 2;
+    padding: $global-padding * 2.5 0 $global-padding * 1.5;
+
+    .slick-center {
+      transform: scale(1.15);
+      position: relative;
+      z-index: 3;
+      opacity: 1;
+    }
+  }
+ 
+  .testimonials__wrap {
+    @include container();    
+  }
+
+  .testimonials__testimonial-item {
+    margin: $global-margin 0;
+    transition: $global-transition;
+    opacity: .85;
+  }
+  
+}
+
+// @include breakpoint(large) {
+//   .testimonials__skewed {
+//     height: 5vh;
+//   }
+// }
+
+@include breakpoint(xlarge) {
+
+  .testimonials {
+    // padding: $global-padding * 2.5  0 $global-padding * 2.5;
+    padding: $global-padding * 3.5  0 $global-padding * 2;
+  }
+
+}

@@ -1,0 +1,53 @@
+// User Nav
+// ==========================
+//
+
+.user-nav {
+	margin-bottom: $global-margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.user-nav__heading {
+	@include heading();
+	margin-bottom: $global-margin / 2;
+	font-size: 1.8rem;
+	text-align: left;
+}
+
+.user-nav__list {
+	@include reset-list();
+}
+
+.user-nav__item {
+	display: block;
+	margin-bottom: $global-margin / 5;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.user-nav__item-lnk {
+	display: block;
+	color: $black;
+	transition: $global-transition;
+
+	&:hover {
+		color: $primary-color;
+	}
+
+	span {
+		color: $primary-color;
+	}
+
+	&--logout {
+		color: $primary-color;
+
+		&:hover {
+			color: $black;
+		}
+	}
+}

@@ -1,0 +1,113 @@
+.cars {
+  padding: $global-padding  0;
+  background: $light-gray;
+}
+
+.cars__wrap {
+  @include container(420px);    
+}
+
+.cars__car-item {
+  margin-bottom: $global-margin / 1.5;
+
+  // &:last-child {
+  //   margin-bottom: 0;
+  // }
+}
+
+// .cars__small-items-container {
+  // margin-bottom: $global-margin / 1.5;
+
+  // &:last-child {
+  //   margin-bottom: 0;
+  // }
+// }
+
+
+@include breakpoint(small) {
+
+  .cars {
+    padding: $global-padding * 1.5 0;
+  }
+    
+
+  .cars__small-items-container {
+    margin: 0;
+    
+    display: flex;
+    flex-wrap: wrap;
+    // align-content: space-between;
+    justify-content: space-between;
+  }
+
+  .cars__wrap {
+    @include container(768px);    
+  }
+
+  .cars__small-item {
+    width: span(6);
+  }
+
+}
+
+@include breakpoint(large) {
+
+  .cars__wrap {
+    @include container();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: space-between;
+    margin-bottom: $global-margin / 1.5;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+  }
+    
+  .cars__small-items-container {
+    width: span(6);
+    align-content: space-between;
+  }
+
+  .cars__car-item {
+    margin: 0;
+    width: span(6);
+  }
+
+}
+
+// @include breakpoint(small) {
+
+//   
+//   
+//   .cars__small-items-container {
+//     margin: 0;
+//     width: span(6);
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-content: space-between;
+//     justify-content: space-between;
+//   }
+
+//   .cars__small-item {
+//     width: span(6);
+//   }
+
+//   .cars__car-item {
+//     width: span(6);
+//     margin-bottom: 0;
+//     margin-right: gutter();
+//   }
+  
+// }
+
+@include breakpoint(xlarge) {
+
+  .cars {
+    padding: $global-padding * 2 0;
+  }
+
+}

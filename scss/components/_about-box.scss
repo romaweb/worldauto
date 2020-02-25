@@ -1,0 +1,51 @@
+// About Box
+// ==========================
+//
+
+.about-box {
+	
+}
+
+.about-box__img {
+	margin: 0;
+	padding: 0;
+
+	img {
+		@include responsive-img();
+	}
+
+}
+
+.about-box__text {
+	margin: 0;
+	color: $white;
+	background-color: $primary-color;
+}
+
+@include breakpoint(medium) {
+
+	.about-box {
+		// width: span(6);
+		display: flex;
+		flex-wrap: wrap;
+		border-radius: 100%;
+		overflow: hidden;
+	}
+
+	.about-box__text {
+		// width: span(6);
+		padding: $global-padding * 5 / 2 gutter() * 2.5 $global-padding gutter();
+		width: 50%;
+		flex: 0 1 auto;
+
+		&:nth-child(3) {
+			padding: $global-padding gutter() $global-padding * 4 / 2 gutter() * 2.5 ;
+		}
+	}
+
+	.about-box__img {
+		width: 50%;
+		flex: 0 1 auto;
+	}
+
+}

@@ -1,0 +1,75 @@
+// Cart Total
+// ==========================
+//
+
+.cart-total {
+	// padding: $global-padding / 1.5  $global-padding;
+	padding: $global-padding / 2;
+	background-color: $light-gray;
+}
+
+.cart-total__heading {
+	@include heading();
+	margin-bottom: $global-margin / 2;
+	font-size: 2rem;
+}
+
+.cart-total__item {
+	margin: 0;
+	padding-bottom: $global-padding / 4;
+	margin-bottom: $global-margin / 2;
+	display: flex;
+	justify-content: space-between;
+
+	&--border {
+		border-bottom: 1px solid $medium-gray;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.cart-total__text {
+	flex: 0 1 auto;
+	width: span(6);
+	display: block;
+
+	&--product-name {
+		@include heading();
+	}
+}
+.cart-total__price {
+	flex: 0 1 auto;
+	width: span(6);
+	text-align: right;
+
+	&--large {
+		// @include heading();
+		font-size: 2.2rem;
+	}
+}
+
+.cart-total__delivery {
+	flex: 0 1 auto;
+	width: span(6);
+}
+
+.cart-total__lnk {
+	font-size: 1.5rem;
+	color: $primary-color;
+	transition: $global-transition;
+
+	&:hover {
+		color: $black;
+	}
+}
+
+@include breakpoint(medium) {
+
+	.cart-total {
+		padding: $global-padding;
+	}
+	
+}
+

@@ -1,0 +1,17 @@
+// Btns Group
+// ==========================
+//
+
+.btns-group {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	.btn:first-child {
+		margin-right: gutter() / 2;
+	}
+
+	&--center {
+		justify-content: center;
+	}
+}

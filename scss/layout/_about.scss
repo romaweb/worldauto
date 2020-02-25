@@ -1,0 +1,153 @@
+.about {
+  position: relative;
+  padding: $global-padding 0;
+}
+
+.about__skewed {
+  position: absolute;
+  bottom: 100%;
+  z-index: 1;
+  width: 100%;
+  height: 6vw;
+  fill: $white;
+}
+
+.about__wrap {
+  @include container();
+}
+
+.about__text {
+  margin-bottom: $global-margin / 1.5;
+  // color: $light-gray;
+  color: darken($light-gray, 20);
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.about__btn {
+  margin: auto;
+}
+
+.about__line {
+  padding: $global-padding / 2 0 $global-padding / 1.5;
+  background-color: $dark-gray;
+}
+
+.about__content {
+  
+}
+
+.about__img {
+  padding: 0 15px;
+  max-width: 590px;
+  margin: auto;
+  margin-bottom: $global-margin / 1.5;
+
+  img {
+    @include responsive-img();
+  }
+}
+
+@include breakpoint(small) {
+ 
+  .about {
+    padding: $global-padding * 1.5 0;
+  }
+
+  
+
+}
+
+@include breakpoint(medium) {
+
+  .about__text {
+    column-count: 2;
+    column-gap: gutter();
+  }
+
+  .about__img {
+    max-width: 768px;
+  }
+
+}
+
+@include breakpoint(large) {
+
+  .about__line {
+    position: relative;
+
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   display: block;
+    //   top: -$global-padding / 1.5;
+    //   bottom: -$global-padding / 1.5;
+    //   width: 100%;
+    //   right: 0;
+    //   width: span(6);
+    //   background: url("../img/about-bg.png") no-repeat left center;
+    //   background-size: contain;
+    // }
+  }
+
+  // .about__img {
+
+  //   position: absolute;
+  //   display: block;
+  //   top: -$global-padding / 1.5;
+  //   bottom: -$global-padding / 1.5;
+  //   width: 100%;
+  //   right: 0;
+  //   width: span(6);
+  //   background: url("../img/about-bg.png") no-repeat left center;
+  //   background-size: contain;
+  // }
+
+  .about__img {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;	
+    position: absolute;
+    display: block;
+    top: -$global-padding / 1.5;
+    bottom: -$global-padding / 1.5;
+    // width: 100%;
+    right: 0;
+    width: span(6);
+    // background: url("../img/about-bg.png") no-repeat left center;
+    // background-size: contain;
+
+    img {
+      @include center-y();
+      text-align: left;
+    }
+  }
+
+  .about__text {
+    column-count: 1;
+  }
+
+  .about__content {
+    width: span(6);
+    margin-right: span(6 wide);
+  }
+
+  .about__btn {
+    margin: 0;
+  }
+
+}
+
+@include breakpoint(xlarge) {
+
+  .about {
+    padding: $global-padding * 2 0 $global-padding * 3;
+  }
+
+}
+
+
+
+

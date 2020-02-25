@@ -1,0 +1,235 @@
+// .page-header {
+//   position: fixed;
+//   z-index: 6;
+//   width: 100%;
+//   transition: .05s ease;
+
+//   &--no-js {
+//     position: static;
+//     background-color: $dark-gray;
+//   }
+
+// }
+
+// .page-header__top { 
+//   display: none;
+//   padding: $global-padding / 4 0;
+//   border-bottom: 1px solid rgba($white, .5);
+//   background-color: rgba($dark-gray, .7);
+// }
+
+// .page-header__bottom {
+//   padding: $global-padding / 4 0;
+//   background-color: rgba($dark-gray, .7);
+//   transition: $global-transition;
+
+//   &--scrolled {
+//     padding: $global-padding / 6 0;
+//     background-color: $dark-gray;
+//   }
+// }
+
+// .page-header__wrap {
+//   @include container();
+//   flex-wrap: wrap;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// .page-header__bottom-btn {
+//   display: none;
+// }
+
+
+// @include breakpoint(small) {
+
+//   .page-header__top {
+//     display: block;
+//   }
+
+//   .page-header__top-text {
+//     margin: 0;
+//     margin-bottom: $global-margin / 6;
+//     width: 100%;
+//     font-size: $small-font-size;
+//     color: $light-gray;
+//   }
+
+
+  
+
+// }
+
+// @include breakpoint(large) {
+
+//   .page-header__bottom-btn {
+//     display: block;
+//   }
+
+//   .page-header__header-contacts {
+//     order: 1
+//   }
+
+//   .page-header__top-text {
+//     order: 2;
+//     width: auto;
+//     margin: 0 gutter();
+//   }
+
+//   .page-header__social {
+//     order: 3;
+//   }
+
+// }
+
+
+/////////////////////////////////
+.page-header {
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+  transition: .075s ease;
+
+  &--no-js {
+    position: static;
+    background-color: $dark-gray;
+  }
+
+}
+
+.page-header__top { 
+  // display: none;
+  padding: $global-padding / 4 0;
+  // border-bottom: 1px solid rgba($white, .5);
+  transition: .5s ease;
+  background-color: rgba($dark-gray, .7);
+
+  &--scrolled {
+    padding: $global-padding / 6 0;
+    background-color: $dark-gray;
+  }
+}
+
+// .page-header__bottom {
+  // background-color: rgba($dark-gray, .7);
+  // transition: $global-transition;
+
+  // &--scrolled {
+  //   padding: $global-padding / 6 0;
+  //   background-color: $dark-gray;
+  // }
+// }
+
+.page-header__top-wrap {
+  @include container();
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-header__page-logo {
+  flex: 0 0 auto;
+}
+
+.page-header__nav-toggle {
+  flex: 0 0 auto;
+}
+
+.page-header__bottom-btn {
+  display: none;
+  white-space: nowrap;
+}
+
+.page-header__top-text {
+  display: none;
+}
+
+.page-header__header-contacts {
+  display: none;
+}
+
+.page-header__social {
+  display: none;
+}
+
+@include breakpoint(small) {
+
+  
+
+  // .page-header__top {
+  //   display: block;
+  // }
+
+  .page-header__top-text {
+    display: block;
+    margin: 0;
+    margin-right: gutter();
+    margin-bottom: $global-margin / 6;
+    // width: 100%;
+    font-size: $small-font-size;
+    color: $light-gray;
+  }
+
+}
+
+@include breakpoint(medium) {
+
+  .page-header__social {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: gutter();
+  }
+
+}
+
+@include breakpoint(large) {
+
+  .page-header__top {
+    border-bottom: 1px solid rgba($white, .5);
+    transition: $global-transition;
+  }
+
+  .page-header__bottom {
+    padding: $global-padding / 3 0;
+    background-color: rgba($dark-gray, .7);
+    transition: $global-transition;
+
+    &--scrolled {
+      padding: $global-padding / 4 0;
+      background-color: $dark-gray;
+    }
+  }
+
+  .page-header__bottom-wrap {
+    @include container();
+    flex-wrap: wrap;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .page-header__bottom-btn {
+    display: block;
+    margin-right: gutter();
+  }
+
+  .page-header__header-contacts {
+    display: block;
+    margin-right: gutter();
+  }
+
+//   .page-header__top-text {
+//     order: 2;
+//     width: auto;
+//     margin: 0 gutter();
+//   }
+
+//   .page-header__social {
+//     order: 3;
+//   }
+
+}

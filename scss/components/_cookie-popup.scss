@@ -1,0 +1,48 @@
+// Msg Popup
+// ==========================
+//
+
+.cookie-popup {
+	display: none;
+	// opacity: 0;
+	width: 100%;
+	bottom: 0;
+	padding: $global-padding / 4 gutter() / 2;
+	position: fixed;
+	z-index: 5;
+	border-top: 2px solid $primary-color;
+	background-color: $white;
+	// transition: $global-transition;
+
+	&--active {
+		// opacity: 1;
+		display: block;
+	}
+}
+
+.cookie-popup__text {
+	margin: 0;
+	margin-bottom: $global-margin / 3;
+	font-size: $small-font-size;
+}
+
+.cookie-popup__btns-group {
+	justify-content: center;
+}
+
+@include breakpoint(medium) {
+
+	.cookie-popup {
+		width: 500px;
+		right: gutter() / 2;
+		bottom: gutter() / 2;
+		border: 2px solid $primary-color;
+	}
+
+	.cookie-popup__btns-group {
+		justify-content: flex-start;
+	}
+
+}
+
+

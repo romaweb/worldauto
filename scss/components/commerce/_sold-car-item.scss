@@ -1,0 +1,188 @@
+.sold-car-item {
+  display: block;
+  margin: 0;
+  // position: relative;
+  border: 1px solid $global-border-color;
+  background-color: $white;
+  
+
+  &:hover {
+
+
+    .sold-car-item__top-lnk {
+
+      &::before {
+        left: 125%;
+      }
+
+    }
+    
+    img {
+			transform: scale(1.05);
+		}
+  }
+}
+
+.sold-car-item__top-lnk {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -75%;
+		z-index: 1;
+		width: 50%;
+    height: 100%;
+    @include gradient-x(rgba($white, 0), rgba($white, 0.2));
+    transform: skewX(-25deg);
+    transition: $global-transition;
+	}
+}
+
+.sold-car-item__img {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba($black, .35);
+  }
+
+
+  img {
+    @include responsive-img();
+    transition: $global-transition;
+  }
+}
+
+.sold-car-item__caption {
+  display: block;
+  padding: $global-padding / 10 gutter() / 3;
+  margin: 0;
+  position: absolute;
+  top: $global-padding / 4;
+  left: gutter() / 2;
+  z-index: 2;
+  background-color: $primary-color;
+}
+
+.sold-car-item__caption-text {
+  display: block;
+  text-align: center;
+  font-weight: $global-weight-bold;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.sold-car-item__caption-date {
+  @include heading();
+  display: block;
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.sold-car-item__info {
+  padding: $global-padding / 5 gutter() / 2;
+}
+
+.sold-car-item__price {
+  margin-bottom: $global-margin / 10;
+  display: block;
+  font-size: 2.2rem;
+  // display: block;
+  text-align: center;
+  // color: $heading-color;
+  color: $dark-gray;
+  font-weight: $global-weight-bold;
+
+}
+
+.sold-car-item__name {
+  @include sub-heading();
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: $primary-color;
+  transition: $global-transition;
+}
+
+.car-item__text-container {
+  display: block;
+}
+
+
+
+.sold-car-item__specifications {
+  @include reset-list();
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $global-margin / 3;
+  // background-color: $white;
+}
+
+.sold-car-item__specifications-item {
+  display: block;
+   margin-right: gutter() / 5;
+    // padding: $global-padding / 10 $global-padding / 5;
+
+   &:last-child {
+    margin-right: 0;
+  }
+}
+
+.sold-car-item__specifications-icon {
+  display: block;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: $primary-color;
+  }
+
+}
+
+.sold-car-item__specifications-caption {
+  display: block;
+  color: $dark-gray;
+  text-align: center;
+  font-size: $small-font-size;
+}
+
+
+@include breakpoint(small) {
+
+  .sold-car-item__name {
+    font-size: 2.4rem;
+  }
+
+  .sold-car-item__price {
+    // @include heading();
+    display: block;
+    font-size: 2.8rem;
+  }
+
+}
+  
+
+//   .car-item__text {
+//     padding: $global-padding / 2.5 gutter()
+//   }
+
+
+// }

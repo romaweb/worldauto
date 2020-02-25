@@ -1,0 +1,23 @@
+// Side Link
+// ==========================
+//
+
+.side-link {
+	padding: 10px 15px 3px;
+	position: fixed;
+	top: 60%;
+	left: -7px;
+	z-index: 3;
+	transform: rotate(270deg);
+	transform-origin: top left;
+	color: $white;
+	text-transform: uppercase;
+	background-color: $black;
+	transition: $global-transition;
+
+	&:hover {
+		left: 0;
+		color: $white;
+		text-decoration: none;
+	}
+}

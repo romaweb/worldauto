@@ -1,0 +1,24 @@
+// Top Button
+// ==========================
+//
+
+.top-btn {
+	@include btn();
+	width: 60px;
+	height: 60px;
+	background-color: $secondary-color;
+	transition: $global-transition;
+	border-radius: $global-radius / 3;
+	transform: rotate(45deg);
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: $white;
+		transform: rotate(-45deg);
+	}
+
+	&:hover {
+		background-color: $third-color;
+	}
+}

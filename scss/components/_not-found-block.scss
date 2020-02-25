@@ -1,0 +1,40 @@
+// Not Found Block
+// ==========================
+//
+
+.not-found-block {
+  width: 100%;
+  padding: $global-padding / 3 gutter() / 2;
+  margin-bottom: $global-margin;
+  background-color: $secondary-accent-color;
+}
+
+.not-found-block__text {
+  display: block;
+  margin-bottom: $global-margin / 2;
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: $heading-line-height;
+  font-weight: $global-weight-bold;
+  color: $white;
+}
+
+@include breakpoint(xsmall) {
+
+  .not-found-block__text {
+    font-size: 3rem;
+  }
+
+}
+
+@include breakpoint(small) {
+
+  .not-found-block {
+    padding: $global-padding / 2 gutter() / 2;
+  }
+
+  .not-found-block__text {
+    font-size: 4rem;
+  }
+
+}

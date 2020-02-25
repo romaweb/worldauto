@@ -1,0 +1,78 @@
+// Edit Form
+// ==========================
+//
+
+.edit-form {
+	padding: 0 15px;
+}
+
+
+
+.edit-form__input-field-wrap {
+	position: relative;
+	margin-bottom: $global-margin * 2;
+
+	label {
+		margin-bottom: $global-margin / 4;
+		display: block;
+		text-transform: uppercase;
+		font-weight: $global-weight-semi-bold;
+		color: $black;
+	}
+
+	p {
+		width: 100%;
+		font-size: $small-font-size;
+		position: absolute;
+		bottom: -20px;
+		color: $white;
+		margin: 0;
+	}
+
+	.help-block-error {
+		color: $error-color;
+	}
+}
+
+.edit-form__field-heading {
+	margin-bottom: $global-margin / 2;
+	display: block;
+	text-transform: uppercase;
+	font-weight: $global-weight-semi-bold;
+	color: $black;
+}
+
+.edit-form__checkbox {
+	margin-bottom: $global-margin / 1.5;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.edit-form__radio {
+	margin-bottom: $global-margin / 1.5;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@include breakpoint(small) {
+	
+	.edit-form__input-field-wrap {
+		width: span(8);
+	}
+
+}
+
+@include breakpoint(large) {
+	
+	.edit-form__input-field-wrap {
+		width: span(6);
+	}
+
+}
+
+
+

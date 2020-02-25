@@ -1,0 +1,201 @@
+.sold-cars-page {
+  position: relative;
+  padding: $global-padding 0;
+  background-color: $light-gray;
+}
+
+.sold-cars-page__decorative {
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 65px;
+  position: absolute;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 40px;
+    bottom: 19px;
+    background-color: $primary-color;
+    left: -80px;
+    box-shadow: 4px 1px 0 2px $light-gray;
+    transform: skew(-58deg, 10deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 40px;
+    bottom: 19px;
+    background-color: $primary-color;
+    right: -80px;
+    box-shadow: -4px 1px 0 2px $light-gray;
+    transform: skew(58deg, -10deg);
+  }
+
+}
+
+.sold-cars-page__wrap {
+  @include container(420px);
+}
+
+.sold-cars-page__items-container {
+  margin-bottom: $global-margin / 1.5 - gutter();
+}
+
+.sold-cars-page__sold-car-item {
+  margin-bottom: gutter();
+}
+
+// .cars-page__btn {
+//   margin-bottom: $global-margin / 1.5;
+// }
+
+@include breakpoint(small) {
+
+  .sold-cars-page {
+    padding: $global-padding * 1.5 0;
+  }
+
+  .sold-cars-page__decorative {
+    top: -26px;
+    height: 82px;
+  
+    &::before {
+      content: '';
+      width: 160px;
+      height: 50px;
+      bottom: 20px;
+      left: -70px;
+    }
+  
+    &::after {
+      width: 160px;
+      height: 50px;
+      bottom: 20px;
+      right: -70px;
+    }
+
+    
+  
+  }
+
+  .sold-cars-page__wrap {
+    // display: flex;
+    // flex-wrap: wrap;
+    @include container(768px);
+  }
+
+  .sold-cars-page__items-container {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+
+  .sold-cars-page__sold-car-item {
+    width: span(6);
+    margin-right: gutter();
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+}
+
+// @include breakpoint(medium) {
+
+//   .sold-cars-page__wrap {
+//     @include container();
+//   }
+
+//   .sold-cars-page__sold-car-item {
+//     width: span(4);
+//     margin-right: gutter();
+
+//     &:nth-child(2n) {
+//       margin-right: gutter();
+//     }
+
+//     &:nth-child(3n) {
+//       margin-right: 0;
+//     }
+//   }
+
+// }
+
+@include breakpoint(large) {
+
+  .sold-cars-page__wrap {
+    @include container();
+
+    // &--columns {
+    //   display: flex;
+    //   justify-content: space-between;
+    //   align-items: flex-start;
+    // }
+  }
+
+ 
+
+  // .sold-cars-page__items-container {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  // }
+
+  .sold-cars-page__sold-car-item {
+    width: span(3);
+    margin-right: gutter();
+
+    &:nth-child(2n) {
+      margin-right: gutter();
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(3n) {
+      margin-right: gutter();
+    }
+
+    // &--sold {
+    //   width: span(3);
+
+    //   &:nth-child(2n) {
+    //     margin-right: gutter();
+    //   }
+
+    //   &:nth-child(4n) {
+    //     margin-right: 0;
+    //   }
+    // }
+  }
+
+  // .cars-page__сar-descr-container {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
+
+  // .cars-page__сar-info {
+  //   width: span(6);
+  // }
+
+  // .cars-page__gallery {
+  //   width: span(6);
+  // }
+
+}
+
+@include breakpoint(xlarge) {
+
+  .sold-cars-page {
+    padding: $global-padding * 2 0;
+  }
+
+}

@@ -1,0 +1,46 @@
+// Form Msg Popup
+// ==========================
+//
+
+.form-msg-popup {
+	display: none;
+	// opacity: 0;
+	width: 100%;
+	bottom: 0;
+	padding: $global-padding / 4 gutter() / 2;
+	position: fixed;
+	z-index: 6;
+	border-top: 2px solid $secondary-color;
+	background-color: $white;
+	// transition: $global-transition;
+
+	&--active {
+		// opacity: 1;
+		display: block;
+	}
+}
+
+.form-msg-popup__text {
+	margin: 0;
+	margin-bottom: $global-margin / 3;
+	font-size: $small-font-size;
+}
+
+.form-msg-popup__btn {
+	margin: auto;
+}
+
+@include breakpoint(medium) {
+
+	.form-msg-popup {
+		width: 400px;
+		right: gutter() / 2;
+		bottom: gutter() / 2;
+		border: 2px solid $secondary-color;
+	}
+
+	.form-msg-popup__btn {
+		margin: 0;
+	}
+
+}

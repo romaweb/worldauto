@@ -1,0 +1,204 @@
+// Variables
+// ==========================
+//
+
+// Table of Contents:
+//
+// 1. Color Scheme
+// 2. Breakpoints
+// 3. Grid Init
+// 4. Global
+// 5.Typography
+
+// 1. Color Scheme
+//
+
+$white:           #ffffff;
+$light-gray:      #f2f2f2;
+$medium-gray:     #7b7d80;
+// $medium-gray:     #b4b4b4;
+$dark-gray:       #2c2b2e;
+$black:           #00000c;
+
+
+
+
+
+$primary-color: #1c9cd6;
+$secondary-color: #5f00ba;
+$third-color: #7f2982;
+
+
+
+$error-color:   #f55a4e;
+// $warning-color: #ffa21a;
+// $success-color: #5cb860;
+// $info-color:    #00d3ee;
+
+// 2.Breakpoints
+//
+// xxsmall: (Custom, iPhone Retina(Original, 3G, 3GS))
+// xsmall:  (Extra Small Devices, Phones, Android)
+// small:   (Small Devices, Tablets) 
+// medium:  (Big landscape tablets, laptops and desktops)
+// large:   (SXGA Display, Large Devices, HD, laptops, and Desktops)
+// xlarge:  (WXGA+, HD+, laptops, and Desktops)
+// xxlarge: (HD+, TV, Desktops)
+
+$breakpoints: (
+  'xxsmall': (min-width: 0),      
+  'xsmall':  (min-width: 480px) ,
+  'small':   (min-width: 768px),
+  'medium':  (min-width: 1024px),
+  'large':   (min-width: 1200px),
+  'xlarge':  (min-width: 1440px),
+  'xxlarge': (min-width: 1620px),
+);
+
+// 3. Grid Init
+//
+
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': 30px,
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);
+
+$container-width:   1600px;
+$container-padding: 15px; 
+
+// 4.Global
+//
+
+$html-font-size:           10px;
+$global-font-size:         1.5rem;
+$global-line-height:       1.4;
+
+$body-background:          $white;
+$body-font-color:          $medium-gray;
+
+$font-family-monospace:    Consolas, 'Liberation Mono', Courier, monospace;
+// $body-font-family:         'Roboto', Helvetica,  sans-serif;
+// $body-font-family:         'Raleway', Arial, sans-serif;
+$body-font-family:         'Open Sans', Arial, sans-serif;
+$global-weight-light:      300;
+$global-weight-normal:     400;
+$global-weight-semi-bold:  500;
+$global-weight-bold:       700;
+$global-weight-extra-bold: 900;
+$body-antialiased:         true;
+
+$global-sizing:         border-box;
+$global-margin:         50px;
+$global-padding:        50px;
+
+$global-radius:         4px;
+
+$global-border-color:   lighten($dark-gray, 70);
+$global-transition:     all 0.5s ease-in-out;
+$global-shadow:         0 3px 7px 1px rgba($black, .25);
+// $global-shadow:        0 12px 20px -10px rgba($primary-color, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba($primary-color, 0.2);
+$global-shadow-hover:  0 14px 26px -12px rgba($primary-color, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba($primary-color, 0.2);
+// 5.Typography
+//
+
+$small-font-size:              85%;
+
+// $heading-font-family:          'Roboto Mono', Consolas, monospace;
+// $heading-font-family:          'Open Sans', Arial, sans-serif;
+$heading-font-family:          'Rubik', Arial, sans-serif;
+$heading-font-style:           normal;
+$heading-font-weight:          $global-weight-semi-bold;
+$heading-color:                $black;
+$heading-line-height:          1.2;
+$heading-margin-bottom:        $global-margin / 4;
+
+$heading-sizes: (
+  xxsmall: (
+    'h1': 30px,
+    'h2': 26px,
+    'h3': 24px,
+    'h4': 22px,
+    'h5': 20px,
+    'h6': 16px,
+  ),
+  small: (
+    'h1': 44px,
+    'h2': 40px,
+    'h3': 36px,
+    'h4': 32px,
+    'h5': 24px,
+    'h6': 20px,
+  ),
+);
+
+
+$heading-text-rendering:       optimizeLegibility;
+$heading-small-font-color:     $medium-gray;
+
+// $sub-heading-font-family:      'Roboto Mono', Consolas, monospace;
+$sub-heading-font-family:      $heading-font-family;
+$sub-heading-font-style:       normal;
+$sub-heading-font-weight:      $global-weight-semi-bold;
+$sub-heading-color:            $black;
+$sub-heading-line-height:      1.2;
+$sub-heading-margin-bottom:    $global-margin / 5;
+$sub-heading-text-rendering:   optimizeLegibility;
+
+$paragraph-line-height:        inherit;
+$paragraph-margin-bottom:      $global-margin / 5;
+$paragraph-text-rendering:     optimizeLegibility;
+
+$anchor-color:                 $primary-color;
+$anchor-color-hover:           $black;
+$anchor-text-decoration:       none;
+$anchor-text-decoration-hover: none;
+$anchor-transition:            $global-transition;
+
+$hr-width:                     100%;
+$hr-border:                    1px solid $global-border-color;
+$hr-margin:                    $global-margin / 2 auto;
+
+$list-lineheight:              $paragraph-line-height;
+$list-margin-bottom:           $paragraph-margin-bottom;
+$list-style-type:              square;
+$sub-list-style-type:          circle;
+$list-style-position:          outside;
+$list-side-margin:             $global-margin / 2;
+$list-nested-side-margin:      $global-margin / 2;
+
+$defnlist-margin-bottom:       $paragraph-margin-bottom;
+$defnlist-term-weight:         $global-weight-bold;
+$defnlist-term-margin-bottom:  0;
+
+$blockquote-color:             inherit;
+$blockquote-padding:           $global-padding / 5 $global-padding / 4;
+$blockquote-border:            5px solid $primary-color;
+
+$cite-font-size:               $small-font-size;
+$cite-color:                   $medium-gray;
+
+$code-color:                   $white;
+$code-font-family:             $font-family-monospace;
+$code-font-weight:             $global-weight-normal;
+$code-background:              $black;
+$code-border:                  none;
+$code-padding:                 $global-padding / 10;
+
+$keystroke-font:               $font-family-monospace;
+$keystroke-color:              $white;
+$keystroke-background:         $primary-color;
+$keystroke-padding:            $global-padding / 10;
+$keystroke-radius:             0;
+
+$abbr-underline:               1px dotted $medium-gray;
+
+
+
+
+
+
+
+
+

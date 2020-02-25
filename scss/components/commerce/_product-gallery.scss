@@ -1,0 +1,43 @@
+// Product Gallery
+// ==========================
+//
+
+.product-gallery {
+	// margin-bottom: $global-margin;
+	overflow: hidden;
+}
+
+.product-gallery__expanded-img {
+	margin: 0;
+	padding: 0;
+
+}
+
+.product-gallery__expanded-lnk {
+	display: block;
+
+
+	img {
+		@include responsive-img();
+	}
+}
+
+.product-gallery__thumbs {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product-gallery__thumb-item {
+	display: block;
+	width: 25%;
+
+	img {
+		@include responsive-img();
+	}
+
+
+}
+
+
+
+

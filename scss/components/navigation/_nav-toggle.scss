@@ -1,0 +1,26 @@
+.nav-toggle {
+	display: block;
+	padding: $global-padding / 10;
+	width: 40px;
+	height: 40px;
+	background-color: $primary-color;
+	transition: $global-transition;
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: $white;
+	}
+
+	&:hover {
+		background-color: $black;
+	}
+}
+
+@include breakpoint(large) {
+
+	.nav-toggle {
+		display: none;
+	}
+
+}

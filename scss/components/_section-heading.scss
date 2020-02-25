@@ -1,0 +1,173 @@
+// Section Heading
+// ==========================
+//
+
+.section-heading {
+	@include heading();
+	@include container();
+	padding-bottom: $global-padding / 2;
+	position: relative;
+	margin-bottom: $global-margin / 1.5;
+	color: $heading-color;
+	text-transform: uppercase;
+	font-size: 2.6rem;
+	text-align: center;
+
+	&:after {
+		content: '';
+		display: block;
+		@include center-x();
+		bottom: 0;
+		width: 80px;
+		// left: 0;
+		// right: 0;
+		height: 2px;
+		background-color: $primary-color;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		@include center-x();
+		bottom: 8px;
+		width: 60px;
+		// left: 0;
+		// right: 0;
+		height: 1px;
+		background-color: $primary-color;
+	}
+
+
+
+	// &:after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	z-index: 1;
+	// 	@include center-x();
+	// 	display: block;
+	// 	width: 130px;
+	// 	height: 1px;
+	// 	background-color: $light-gray;
+	// }
+
+	// &:before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	@include center-x();
+	// 	z-index: 2;
+	// 	display: block;
+	// 	width: 60px;
+	// 	height: 1px;
+	// 	background-color: $primary-color;
+	// }
+
+	&--small {
+		font-size: 2.2rem;
+	}
+
+	&--light {
+		color: $white;
+	}
+
+	&--small-margin {
+		margin-bottom: $global-margin / 4;
+	}
+
+	&--left {
+		text-align: left;
+	}
+
+	&--no-padding {
+		padding: 0;
+	}
+
+
+	&--no-line {
+		padding-bottom: 0;
+		
+		&:after {
+			content: none;
+		}
+
+		&:before {
+			content: none;
+		}
+	}
+}
+
+// @include breakpoint(small) {
+	
+// 	.section-heading {
+// 		font-size: 3rem;
+// 	}
+
+// }
+
+// @include breakpoint(small) {
+	
+// 	.section-heading {
+// 		font-size: 3.4rem;
+// 		margin-bottom: $global-margin;
+
+// 	}
+
+// }
+
+@include breakpoint(xsmall) {
+	
+	.section-heading {
+		font-size: 3.4rem;
+	}
+
+	&--small {
+		font-size: 2.6rem;
+	}
+
+}
+
+@include breakpoint(small) {
+	
+	.section-heading {
+		font-size: 4rem;
+		margin-bottom: $global-margin;
+
+		&::after {
+			width: 100px;
+		}
+
+		&::before {
+			width: 80px;
+		}
+
+
+
+		&--small-margin {
+			margin-bottom: $global-margin / 2;
+		}
+
+		&--small {
+			font-size: 3rem;
+		}
+	}
+
+}
+
+@include breakpoint(large) {
+	
+	.section-heading {
+		font-size: 4.8rem;
+		// margin-bottom: $global-margin * 1.5;
+
+		// &--small-margin {
+		// 	margin-bottom: $global-margin / 1.5;
+		// }
+
+		&--small {
+			font-size: 3.8rem;
+		}
+
+	}
+
+}

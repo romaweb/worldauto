@@ -1,0 +1,176 @@
+.car-item {
+  display: block;
+  margin: 0;
+  position: relative;
+  border: 1px solid $global-border-color;
+  overflow: hidden;
+
+  &:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -75%;
+		z-index: 1;
+		width: 50%;
+    height: 100%;
+    @include gradient-x(rgba($white, 0), rgba($white, 0.2));
+    transform: skewX(-25deg);
+    transition: $global-transition;
+	}
+
+  &--large {
+
+    .car-item__specifications {
+      display: none;
+    }
+
+  }
+
+  &:hover {
+
+    &::before {
+			left: 125%;
+    }
+    
+    img {
+			transform: scale(1.05);
+		}
+  }
+}
+
+
+.car-item__img {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba($black, .35);
+  }
+  
+
+  img {
+    @include responsive-img();
+    transition: $global-transition;
+  }
+}
+
+.car-item__text {
+  padding: $global-padding / 4 gutter() / 2;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.car-item__price {
+  display: inline-block;
+  transform: skewX(18deg);
+  padding: $global-padding / 10 gutter() / 2;
+  color: $white;
+	font-family: $heading-font-family;
+	font-weight: $global-weight-semi-bold;
+	background-color: $primary-color;
+}
+
+.car-item__price-text {
+  // font-size: 2.6rem;
+  font-size: 1.8rem;
+  display: block;
+  transform: skewX(-18deg);
+}
+
+.car-item__name {
+  @include sub-heading();
+  margin-bottom: $global-margin / 5;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  color: $white;
+}
+
+.car-item__text-container {
+  display: block;
+}
+
+@include breakpoint(small) {
+
+  .car-item__specifications {
+    width: auto;
+    @include reset-list();
+    // display: flex;
+
+    // align-self: flex-end;
+    background-color: $white;
+  }
+
+  .car-item__specifications-item {
+    display: block;
+    padding: $global-padding / 10 $global-padding / 5;
+    // margin: 0 gutter() / 3;
+  }
+
+  .car-item__specifications-icon {
+    display: block;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $primary-color;
+    }
+  }
+
+  .car-item__specifications-caption {
+    display: block;
+    color: $dark-gray;
+    text-align: center;
+  }
+
+  .car-item {
+
+    &--large {
+
+      .car-item__specifications {
+        display: inline-flex;
+      }
+
+      .car-item__name {
+        font-size: 3.8rem;
+      }
+
+      .car-item__price-text {
+        font-size: 2.6rem;
+      }
+
+    }
+  }
+
+  .car-item__name {
+    font-size: 2.6rem;
+  }
+
+  .car-item__text {
+    padding: $global-padding / 2.5 gutter()
+  }
+
+  
+
+
+}

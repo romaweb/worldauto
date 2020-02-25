@@ -1,0 +1,64 @@
+// Product Sizes
+// ==========================
+//
+
+.product-sizes {
+	margin-bottom: $global-margin / 4;
+}
+
+.product-sizes__wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product-sizes__heading {
+	margin-bottom: $global-margin / 8;
+	display: block;
+}
+
+.product-sizes__item {
+	height: 30px;
+	padding: 0 $global-padding / 10;
+	min-width: 60px;
+	display: block;
+	margin-right: $global-margin / 4;
+	margin-bottom: $global-margin / 2;
+	line-height: 30px;
+	color: $white;
+	text-align: center;
+	border-radius: $global-radius;
+	background-color: $medium-gray;
+	cursor: pointer;
+	transition: $global-transition;
+
+	&--active {
+		background-color: $primary-color;
+		color: $white;
+	}
+
+
+	&:hover {
+		color: $white;
+		background-color: $primary-color;
+	}
+
+	&--packs {
+		height: auto;
+		padding: 0;
+		min-width: auto;
+		line-height: inherit;
+		border-radius: none;
+		background-color: transparent;
+		cursor: auto;
+		font-size: 1.6rem;
+		color: $black;
+
+		&:hover {
+			color: $black;
+			background-color: transparent;
+		}
+	}
+
+
+}
+

@@ -1,0 +1,29 @@
+.gallery {
+	margin-bottom: $global-margin / 1.5;
+}
+
+.gallery__large {
+	@include reset-list();
+}
+
+.gallery__large-item {
+	display: block;
+	// width: 25%;
+
+	img {
+		@include responsive-img();
+	}
+}
+
+.gallery__nav {
+	@include reset-list();
+}
+
+.gallery__nav-item{
+	
+	display: block;
+
+	img {
+		@include responsive-img();
+	}
+}

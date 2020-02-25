@@ -1,0 +1,84 @@
+// Counter Item
+// ==========================
+//
+
+.counter-item {
+	position: relative;
+	padding: 0 gutter() / 2;
+	padding-bottom: $global-padding / 1.5;
+	margin-bottom: $global-margin / 2;
+
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		@include center-x();
+		width: 80px;
+
+		bottom: 0;
+		height: 2px;
+		background-color: $light-gray;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+		padding-bottom: 0;
+
+		&:after {
+			content: none;
+		}
+	}
+}
+
+.counter-item__number {
+	@include heading();
+	display: block;
+	text-align: center;
+	font-size: 5rem;
+	color: $primary-color;
+}
+
+.counter-item__text {
+	margin: 0;
+	display: block;
+	text-align: center;
+	color: $dark-gray;
+}
+
+@include breakpoint(small) {
+
+	.counter-item__number {
+		font-size: 7rem;
+	}
+
+	.counter-item__text {
+		font-size: 1.8rem;
+		line-height: $heading-line-height;
+	}
+
+}
+
+@include breakpoint(medium) {
+
+	.counter-item {
+		padding: 0;
+
+		&:last-child {
+			margin-bottom: $global-margin / 2;
+		}
+
+		&:after {
+			content: '';
+			left: auto;
+			width: 2px;
+			right: 0;
+			height: auto;
+			top: $global-padding / 4;
+			bottom:  $global-padding / 4;
+		}
+	}
+
+
+
+}

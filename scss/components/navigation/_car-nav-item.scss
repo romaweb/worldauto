@@ -1,0 +1,151 @@
+.car-nav-item {
+  margin-bottom: $global-margin / 1.5;
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+
+  &:nth-child(2n) {
+
+    .car-nav-item__text {
+      flex-direction: row-reverse;
+    }
+
+    .car-nav-item__heading {
+      margin-right: 0;
+      margin-left: gutter();
+    }
+
+    // .car-nav-item__car-img {
+
+    //   &:hover {
+    //     transform: translate(-(gutter()) / 2);
+    //   }
+    // }
+  }
+
+  &:hover {
+
+    .car-nav-item__car-img {
+      transform: translate(-(gutter()) / 2);
+    }
+
+  }
+}
+
+.car-nav-item__img {
+  margin: 0;
+  padding: 0;
+
+  img {
+    @include responsive-img();
+  }
+}
+
+
+.car-nav-item__container {
+  @include center-y();
+  padding: $global-padding / 2 gutter();
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.car-nav-item__car-img {
+  width: span(10);
+  margin: auto;
+  transition: $global-transition;
+
+  img {
+    @include responsive-img();
+  }
+
+  &:hover {
+    transform: translate(gutter() / 2);
+  }
+}
+
+.car-nav-item__text {
+  width: span(12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $global-margin / 2;
+}
+
+.car-nav-item__heading {
+  // @include heading();
+  @include sub-heading();
+  margin-right: gutter();
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  color: $white;
+  
+}
+
+.car-nav-item__icon {
+  flex: 0 0 auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: $primary-color;
+  transform: rotate(45deg);
+  transition: $global-transition;
+
+  svg {
+    height: 100%;
+    width: 100%;
+    fill: $white;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    background-color: $dark-gray;
+  }
+}
+
+@include breakpoint(small) {
+
+  
+
+  .car-nav-item__car-img {
+    width: span(10);
+  }
+
+
+  .car-nav-item__heading {
+    font-size: 3.8rem;
+  }
+
+  .car-nav-item__container {
+  
+    position: absolute;
+    padding: $global-padding gutter();
+  }
+
+  .car-nav-item__icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@include breakpoint(medium) {
+
+  .car-nav-item {
+    margin-bottom: 0;
+  }
+
+}
+
+@include breakpoint(large) {
+
+  .car-nav-item__heading {
+    font-size: 4.4rem;
+  }
+
+}

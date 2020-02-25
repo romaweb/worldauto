@@ -1,0 +1,175 @@
+// Filter 
+// ==========================
+//
+
+.filter {
+	margin-bottom: $global-margin;
+	padding: $global-padding / 2;
+	border-bottom: 1px solid $light-gray;
+}
+
+.filter__form {
+
+}
+
+.filter__form-items-wrap {
+	margin-bottom: $global-margin;
+}
+
+.filter__form-item {
+	margin-bottom: $global-margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.filter__form-label {
+	@include heading();
+	font-weight: $global-weight-semi-bold;
+	margin-bottom: $global-margin / 3;
+}
+
+.filter__form-field {
+	@include input-field();
+	padding: $global-padding / 3;
+	border: 2px solid $medium-gray;
+	border-radius: $global-radius;
+	transition: $global-transition;
+
+	&::placeholder {
+		color: $dark-gray;
+	}
+
+	&:focus {
+		border-color: $primary-color;
+	}
+}
+
+.filter__form-select {
+	width: 100%;
+	position: relative;
+
+	select {
+		@include input-field();
+		appearance: none;
+		padding: $global-padding / 3;
+		border: 2px solid $medium-gray;
+		border-radius: $global-radius;
+		transition: $global-transition;
+	
+		&::placeholder {
+			color: $dark-gray;
+		}
+	
+		&:focus {
+			border-color: $primary-color;
+		}
+	}
+
+	&:before {
+		content: "";
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 8px 8px;
+    border-color: transparent transparent $dark-gray;
+	}
+}
+
+.filter-form__btn-wrap {
+	display: flex;
+	justify-content: space-between;
+}
+
+.filter-form__btn {
+	flex: 0 1 auto;
+	width: span(6);
+}
+
+@include  breakpoint(xsmall) {
+
+	.filter__form-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.filter__form-label {
+		width: span(2);
+	}
+
+	.filter__form-field {
+		width: span(10);
+	}
+
+	.filter__form-select {
+		width: span(10);
+	}
+
+}
+
+@include breakpoint(small) {
+
+	.filter__form-items-wrap {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.filter__form-item {
+		display: block;
+		flex: 1 1 auto;
+		width: span(4);
+		margin-bottom: 0;
+		margin-right: gutter();
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.filter__form-label {
+		width: span(12);
+	}
+
+	.filter__form-field {
+		width: span(12);
+	}
+
+	.filter__form-select {
+		width: span(12);
+	}
+
+	.filter-form__btn-wrap {
+		width: span(6);
+	}
+
+}
+
+@include breakpoint(large) {
+	
+	.filter__form-item {
+		display: flex;
+		align-items: center;
+	}
+
+	.filter__form-label {
+		margin-bottom: 0;
+		width: span(2);
+	}
+
+	.filter__form-field {
+		width: span(10);
+	}
+
+	.filter__form-select {
+		width: span(10);
+	}
+	
+
+}

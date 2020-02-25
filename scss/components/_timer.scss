@@ -1,0 +1,89 @@
+// Timer
+// ==========================
+//
+
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: $global-margin;
+
+  &--center {
+    justify-content: center;
+  }
+}
+
+.timer__item {
+  display: block;
+  text-align: center;
+  margin-right: gutter() / 3;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.timer__value {
+  display: block;
+  width: 55px;
+  padding: $global-padding / 4 gutter() / 3;
+  margin-bottom: $global-margin / 4;
+  font-size: 2rem;
+  text-align: center;
+  color: $white;
+  // line-height: .75; 
+  background-color: $secondary-color;
+}
+
+.timer__text {
+  @include sub-heading();
+	color: $sub-heading-color;
+	text-decoration: none;
+	text-transform: uppercase;
+  // font-size: 1.8rem;
+}
+
+@include breakpoint(xsmall) {
+
+  .timer__value {
+    padding: $global-padding / 4 gutter() / 2;
+    font-size: 3.4rem;
+    width: 90px;
+  }
+
+  .timer__text {
+    font-size: 2.2rem;
+  }
+
+}
+
+@include breakpoint(small) {
+
+  .timer__value {
+    padding: $global-padding / 3 gutter() / 2;
+    font-size: 4rem;
+    width: 110px;
+  }
+
+  .timer__text {
+    font-size: 2.4rem;
+  }
+
+}
+
+@include breakpoint(large) {
+
+  .timer__value {
+    padding: $global-padding / 4 gutter() / 2;
+    font-size: 6rem;
+    width: 150px;
+  }
+
+  // .timer__text {
+  //   font-size: 2rem;
+  // }
+
+  .timer__item {
+    margin-right: gutter() /2;
+  }
+
+}

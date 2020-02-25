@@ -1,0 +1,63 @@
+// Sizing Table
+// ==========================
+//
+
+.sizing-table {
+	overflow-x: auto;
+	margin-bottom: $global-margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.sizing-table__item {
+	// width: span(12);
+	width: 480px;
+	border-collapse: collapse;
+}
+
+
+.sizing-table__heading {
+	@include heading();
+	margin-bottom: $global-margin / 2;
+	text-align: left;
+	font-size: 2.2rem;
+}
+
+.sizing-table__row {
+	
+	&:nth-child(odd) {
+		background-color: $light-gray;
+	}
+	&:first-child {
+		background-color: $primary-color;
+		color: $white;
+		font-size: 1.5rem;
+	}
+}
+
+.sizing-table__cell {
+	padding: $global-padding / 2  $global-padding / 4;
+
+	&:first-child {
+		font-family: $heading-font-family;
+		font-weight: $heading-font-weight;
+	}
+}
+
+@include breakpoint(xsmall) {
+
+	.sizing-table__item {
+		width: span(12);
+	}
+
+}
+
+@include breakpoint(medium) {
+
+	.sizing-table__item {
+		width: span(12);
+	}
+
+}

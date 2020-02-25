@@ -1,0 +1,25 @@
+.textarea {
+	@include input-field();
+	width: 100%;
+	background-color: $light-gray;
+	padding:  $global-padding / 5  gutter() / 3; 
+	border-bottom: 2px solid $dark-gray;
+	color: $black;
+	// box-shadow: $global-shadow;
+
+	&::placeholder {
+		color: $medium-gray;
+	}
+
+	&:focus {
+		border-color: $primary-color;
+	}
+}
+
+@include breakpoint(small) {
+
+	.textarea {
+		padding:  $global-padding / 4 gutter() / 3; 
+	}
+
+}

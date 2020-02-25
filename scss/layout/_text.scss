@@ -1,0 +1,130 @@
+.text {
+  padding: $global-padding  0;
+  // position: relative;
+  background-color: $dark-gray;
+
+ }
+
+ .text__wrap {
+    color: darken($light-gray, 20);
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-top: 0;
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      transition: $global-transition;
+
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+ }
+  
+
+// .team__decorative {
+//   top: -20px;
+//   left: 0;
+//   right: 0;
+//   height: 65px;
+//   position: absolute;
+//   overflow: hidden;
+
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     display: block;
+//     width: 150px;
+//     height: 40px;
+//     bottom: 19px;
+//     background-color: $primary-color;
+//     left: -80px;
+//     box-shadow: 4px 1px 0 2px $light-gray;
+//     transform: skew(-58deg, 10deg);
+//   }
+
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     display: block;
+//     width: 150px;
+//     height: 40px;
+//     bottom: 19px;
+//     background-color: $primary-color;
+//     right: -80px;
+//     box-shadow: -4px 1px 0 2px $light-gray;
+//     transform: skew(58deg, -10deg);
+//   }
+
+// }
+
+.text__wrap {
+  @include container();
+}
+
+ 
+@include breakpoint(small) {
+
+
+  .text {
+    padding: $global-padding * 1.5 0;
+  }
+
+  // .team__wrap {
+  //   @include container(768px);
+  // }
+
+  // .team__decorative {
+  //   top: -26px;
+  //   height: 82px;
+  
+  //   &::before {
+  //     content: '';
+  //     width: 160px;
+  //     height: 50px;
+  //     bottom: 20px;
+  //     left: -70px;
+  //   }
+  
+  //   &::after {
+  //     width: 160px;
+  //     height: 50px;
+  //     bottom: 20px;
+  //     right: -70px;
+  //   }
+  
+  // }
+}
+
+@include breakpoint(medium) {
+
+  .text__wrap {
+    column-count: 2;
+    column-gap: $global-padding;
+  }
+
+}
+
+// @include breakpoint(large) {
+
+//   .team__wrap {
+//     @include container(1200px);
+//   }
+
+// }
+
+
+@include breakpoint(xlarge) {
+
+  .text {
+    padding: $global-padding * 2  0;
+  }
+
+}

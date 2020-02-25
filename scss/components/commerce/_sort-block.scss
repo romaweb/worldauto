@@ -1,0 +1,90 @@
+// Sort Block
+// ==========================
+//
+
+.sort-block {
+	margin-bottom: $global-margin;
+}
+
+.sort-block__item {
+	margin-bottom: $global-margin / 2;
+	display: flex;
+	align-items: baseline;
+}
+
+.sort-block__item-field {
+	flex: 1 1 auto;
+	position: relative;
+
+	select {
+		@include input-field();
+		background-color: transparent;
+		padding:  $global-padding / 8;
+		border-bottom: 2px solid $medium-gray;
+		resize: none;
+		color: inherit;
+		appearance: none;
+		-webkit-appearance: none;
+	
+		&::placeholder {
+			color: $black;
+		}
+	
+		&:focus {
+			border-bottom-color: $primary-color;
+		}
+	}
+
+	&:before {
+		content: "";
+    position: absolute;
+    pointer-events: none;
+    right: 5px + $global-padding / 8;
+		top: 12px;
+		display: block;
+		width: 8px;
+		height: 2px;
+		transform: rotate(45deg);
+		background-color: $medium-gray;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		pointer-events: none;
+		right: $global-padding / 8;
+		top: 12px;
+		display: block;
+		width: 8px;
+		height: 2px;
+		transform: rotate(-45deg);
+		background-color: $medium-gray;
+	}
+}
+
+.sort-block__item-text {
+	margin: 0;
+	flex: 0 1 auto;
+	margin-right: gutter() * 2;
+	color: $medium-gray;
+}
+
+.sort-block__info {
+	margin: 0;
+	color: $medium-gray;
+}
+
+@include breakpoint(small) {
+	
+	.sort-block {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.sort-block__item {
+		width: span(4);
+		margin-bottom: 0;
+	}
+
+}

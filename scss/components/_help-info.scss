@@ -1,0 +1,45 @@
+// Help Info
+// ==========================
+//
+
+.help-info {
+	position: relative;
+	padding-left: 100px;
+	margin-bottom: $global-margin * 2;
+}
+
+.help-info__heading {
+	@include heading();
+	font-size: 3.2rem;
+	color: $white;
+	margin-bottom: 5px;
+}
+
+.help-info__lnk {
+	display: block;
+	color: $white;
+	margin-bottom: 5px;
+
+	&:hover {
+		text-decoration: underline;
+		color: $white;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.help-info__icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	fill: $primary-color;
+	width: 80px;
+	height: 80px;
+	background-color: $white;
+	border-radius: 100%;
+	box-shadow: $global-shadow;
+}
+

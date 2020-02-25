@@ -1,0 +1,19 @@
+// Gradients
+// ==========================
+//
+
+@mixin gradient-x($start-color: $primary-color, $end-color: $white, $start-percent: 0%, $end-percent: 100%) {
+  background: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
+}
+
+@mixin gradient-y($start-color: $primary-color, $end-color: $white, $start-percent: 0%, $end-percent: 100%) {
+  background: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+}
+
+@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg, $start-percent: 0%, $end-percent: 100%) {
+  background: linear-gradient($deg, $start-color $start-percent, $end-color $end-percent);
+}
+
+@mixin gradient-radial($inner-color: $primary-color, $outer-color: $white, $shape: ellipse,  $start-percent: 0%, $end-percent: 100%) {
+  background: radial-gradient($shape, $inner-color $start-percent, $outer-color $end-percent);
+}

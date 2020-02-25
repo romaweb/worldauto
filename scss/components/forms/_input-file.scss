@@ -1,0 +1,41 @@
+// Custom Input File
+// ==========================
+//
+
+
+.custom-inputfile {
+
+	input {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+	}
+
+	input + label {
+
+		padding:  $global-padding / 4 0;
+		border-bottom: 2px solid $dark-gray;
+		cursor: pointer;
+	}
+}
+
+.custom-inputfile__icon {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	vertical-align: bottom;
+	margin-right: 5px;
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: $primary-color;
+	}
+}
+
+.custom-inputfile__text {
+	display: inline-block;
+	vertical-align: bottom;
+	font-weight: normal;
+	text-transform: none;
+}

@@ -1,0 +1,103 @@
+.dillers {
+  padding: $global-padding 0;
+  background-color: $light-gray;
+}
+
+.dillers__wrap {
+  @include container(400px);
+}
+
+// .dillers__items-container {
+
+//   background:  $dark-gray;
+// }
+
+.dillers__diller-item {
+  border-bottom: 2px solid $white;
+
+  // &:last-child {
+  //   border-bottom: 0;
+  // }
+
+  
+}
+
+@include breakpoint(xsmall) {
+
+  .dillers__wrap {
+    @include container();
+  }
+  
+
+  .dillers__items-container {
+    display: flex;
+    flex-wrap: wrap;
+    // background:  $dark-gray url("../img/dillers-bg.jpg") no-repeat center center;
+    // background-size: cover;
+  }
+
+  .dillers__diller-item {
+    flex: 1 1 auto;
+    width: (100% / 2);
+    border-right: 2px solid $white;
+    // border-bottom: 2px solid $white;
+  
+  
+    // &:nth-child(2n) {
+    //   border-right: none;
+    // }
+  
+    // &:nth-last-child(-n+2) {
+      // border-bottom: none;
+    // }
+
+    // &:last-child {
+    //   border-right: none;
+    // }
+  
+    
+  }
+
+}
+
+
+@include breakpoint(small) {
+
+  .dillers {
+    padding: $global-padding * 1.5 0;
+
+    // background:  $dark-gray url("../img/dillers-bg.jpg") no-repeat center center;
+    // background-size: cover;
+  }
+}
+
+@include breakpoint(medium) {
+
+  .dillers__diller-item {
+    width: (100% / 3); 
+  
+    &:nth-child(2n) {
+      border-right: 2px solid $white;
+    }
+  
+  
+    
+  }
+
+}
+
+@include breakpoint(large) {
+
+  .dillers__diller-item {
+    width: (100% / 6); 
+  }
+
+}
+
+@include breakpoint(xlarge) {
+
+  .dillers {
+    padding: $global-padding * 2 0;
+  }
+
+}

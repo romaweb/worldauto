@@ -1,0 +1,45 @@
+.testimonial-item {
+  padding: $global-padding / 3 gutter() / 2;
+  background-color: $primary-color;
+}
+
+.testimonial-item__img {
+  margin: 0;
+  padding: 0;
+  margin-bottom: $global-margin / 5;
+
+  img {
+    @include responsive-img();
+    margin: auto;
+  }
+}
+
+.testimonial-item__name {
+  @include sub-heading();
+  margin-bottom: $global-margin / 10;
+  color: $white;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.testimonial-item__car {
+  display: block;
+  text-align: center;
+  // @include sub-heading();
+  color: $white;
+  font-weight: normal;
+  text-align: center;
+  font-size: 2rem;
+}
+
+@include breakpoint(small) {
+
+  .testimonial-item__name {
+    font-size: 2rem;
+  }
+
+  .testimonial-item__car {
+    font-size: 2.2rem;
+  }
+
+}

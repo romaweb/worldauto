@@ -1,0 +1,39 @@
+// Info Block
+// ==========================
+//
+
+.info-block {
+	margin-bottom: $global-margin;
+}
+
+.info-block__heading {
+	@include heading();
+	margin-bottom: $global-margin / 2;
+	color: $white;
+	font-size: 1.8rem;
+	text-align: left;
+}
+
+.info-block__text {
+	padding: 0;
+	color: $medium-gray;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: $light-gray;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+	@include breakpoint(medium) {
+
+		.info-block {
+			margin-bottom: 0;
+		}
+
+	}

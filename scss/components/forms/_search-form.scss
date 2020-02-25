@@ -1,0 +1,31 @@
+.search-form {
+	display: flex;
+	// display: block;
+	margin: auto;
+	margin-bottom: $global-margin / 1.5;
+	max-width: 768px;
+
+	padding: $global-padding / 5 gutter() / 4;
+	background-color: $white;
+	// border: 4px solid $primary-color;
+}
+
+.search-form__input-field {
+	flex: 1 1 auto;
+	// margin-right: gutter() / 2;
+}
+
+.search-form__btn-text {
+	display: none;
+}
+
+@include breakpoint(small) {
+
+	.search-form {
+		padding: $global-padding / 3 gutter() / 2;
+	}
+	
+
+}
+
+

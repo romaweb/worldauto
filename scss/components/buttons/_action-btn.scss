@@ -1,0 +1,81 @@
+// Action Btn
+//==========================
+//
+
+.action-btn {
+	@include reset-list();
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.action-btn__item {
+	flex: 0 1 auto;
+	margin-right: $global-margin / 2;
+	// margin-bottom: $global-margin / 2;
+	
+	// overflow: hidden;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.action-btn__lnk {
+	position: relative;
+	width: 28px;
+	height: 28px;
+	display: block;
+	padding: $global-padding / 4;
+	background-color: $dark-gray;
+	transition: $global-transition;
+	border-radius: $global-radius;
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: $white;
+	}
+
+	&:hover {
+		background-color: $primary-color;
+	}
+
+	&:after {
+		content:attr(data-description);
+		display: block;
+		position: absolute;
+		padding: 2px;
+		width: 60px;
+		background-color: $dark-gray;
+		color: $white;
+		border-radius: $global-radius;
+		font-size: $small-font-size;
+		top: -90%;
+		left: -20px;
+		opacity: 0;
+		text-align: center;
+		transition: $global-transition;
+		line-height: 1;
+	}
+
+	&:hover:after {
+		top: -100%;
+		opacity: 1;
+	}
+
+	&--delete {
+		background-color: $error-color;
+	}
+
+	&--edit {
+		background-color: $info-color;
+	}
+
+	&--block {
+		background-color: $warning-color;
+	}
+
+	&--unblock {
+		background-color: $success-color;
+	}
+}

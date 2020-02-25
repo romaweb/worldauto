@@ -1,0 +1,291 @@
+// Base Typography
+// ==========================
+//
+
+// Table of Contents:
+//
+// 1.Typography Resets
+// 2.Paragraphs
+// 3.Emphasized text
+// 4.Strong text
+// 5.Small text
+// 6.Headings
+// 7.Links
+// 8.Horizontal Rule
+// 9.Lists
+// 10.Blockquote
+// 11.Cite
+// 12.Code
+// 13.Figure
+// 14. Keystroke
+// 15.Abbreviations
+
+
+// 1.Typography Resets
+//
+
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+small {
+	font-size: $small-font-size;
+}
+
+
+
+// 2.Paragraphs
+//
+
+p {
+	margin-bottom: $paragraph-margin-bottom;
+	font-size: inherit;
+	line-height: $paragraph-line-height;
+	text-rendering: $paragraph-text-rendering;
+}
+
+// 3.Emphasized text
+//
+
+em,
+	i {
+	 font-style: italic;
+	 line-height: inherit;
+}
+
+// 4.Strong text
+//
+
+strong,
+b {
+	font-weight: $global-weight-bold;
+	line-height: inherit;
+}
+
+// 5.Small Text
+//
+
+small {
+	font-size: $small-font-size;
+	line-height: inherit;
+}
+
+// 6.Headings
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $heading-font-family;
+	font-style: $heading-font-style;
+	font-weight: $heading-font-weight;
+	line-height: $heading-line-height;
+	margin-bottom: $heading-margin-bottom;
+	color: $heading-color;
+
+
+
+	text-rendering: $sub-heading-text-rendering;
+
+	small {
+		line-height: 0;
+		color: $heading-small-font-color;
+	}
+}
+
+@each $size, $headers in $heading-sizes {
+		@include breakpoint($size) {
+		 @each $header, $font-size in $headers {
+				#{$header} {
+				 font-size: #{$font-size / $html-font-size}rem;
+				}
+			}
+		}
+	}
+
+// 7.Links
+//
+
+a {
+	line-height: inherit;
+	color: $anchor-color;
+	text-decoration: $anchor-text-decoration;
+	cursor: pointer;
+	transition: $anchor-transition;
+
+	&:hover,
+	&:focus {
+		color: $anchor-color-hover;
+		text-decoration: $anchor-text-decoration-hover;
+	}
+
+	img {
+		border: 0;
+	}
+}
+
+// 8.Horizontal Rule
+//
+
+hr {
+	clear: both;
+	max-width: $hr-width;
+	height: 0;
+	margin: $hr-margin;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: $hr-border;
+	border-left: 0;
+}
+
+// 9.Lists
+//
+
+ul,
+ol,
+dl {
+	margin-bottom: $list-margin-bottom;
+	list-style-position: $list-style-position;
+	line-height: $list-lineheight;
+}
+
+li {
+	font-size: inherit;
+}
+
+ul {
+	list-style-type: $list-style-type;
+	margin-left: $list-side-margin;
+
+	ul {
+		list-style-type: $sub-list-style-type;
+	}
+}
+
+ol {
+	margin-left: $list-side-margin;
+}
+
+ul, ol {
+	& & {
+		margin-left: $list-nested-side-margin;
+		margin-bottom: 0;
+	}
+}
+
+dl {
+	margin-bottom: $defnlist-margin-bottom;
+
+	dt {
+		margin-bottom: $defnlist-term-margin-bottom;
+		font-weight: $defnlist-term-weight;
+	}
+}
+
+// 10.Blockquote
+//
+
+blockquote {
+	margin: 0 0 $paragraph-margin-bottom;
+	padding: $blockquote-padding;
+	border-left: $blockquote-border;
+
+	&, p {
+		line-height: $paragraph-line-height;
+		color: $blockquote-color;
+	}
+}
+
+// 11.Cite
+//
+
+cite {
+	display: block;
+	font-size: $cite-font-size;
+	color: $cite-color;
+}
+
+// 12.Code
+//
+
+code {
+  padding: $code-padding;
+  border: $code-border;
+  background-color: $code-background;
+  font-family: $code-font-family;
+  font-weight: $code-font-weight;
+  color: $code-color;
+ }
+
+// 13. Figure
+//
+
+figure {
+	margin: 0;
+}
+
+// 14. Keystroke
+//
+
+kbd {
+  margin: 0;
+  padding: $keystroke-padding;
+  background-color: $keystroke-background;
+  font-family: $keystroke-font;
+  color: $keystroke-color;
+  border-radius: $keystroke-radius;
+}
+
+// 15.Abbreviations
+//
+
+abbr, abbr[title] {
+  border-bottom: $abbr-underline;
+  cursor: help;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

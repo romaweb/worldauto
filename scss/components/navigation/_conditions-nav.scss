@@ -1,0 +1,37 @@
+.conditions-nav {
+
+}
+
+.conditions-nav__lnk {
+  display: block;
+  margin-bottom: $global-margin / 5;
+  text-decoration: none;
+  color: $light-gray;
+  transition: $global-transition;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $primary-color;
+  }
+}
+
+@include breakpoint(small) {
+
+  .conditions-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .conditions-nav__lnk {
+    margin-bottom: 0;
+    margin-right: gutter();
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

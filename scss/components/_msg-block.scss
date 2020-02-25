@@ -1,0 +1,21 @@
+// Msg Block
+// ==========================
+//
+
+.msg-block {
+	margin-bottom: $global-margin;
+	border-top: 2px solid $primary-color;
+	padding: $global-padding / 2 15px; 
+	background-color: $light-gray;
+
+	a {
+		color: $primary-color;
+		font-size: 1.5rem;
+		text-decoration: none;
+		transition: $global-transition;
+	
+		&:hover {
+			color: $black;
+		}
+	}
+}

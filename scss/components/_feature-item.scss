@@ -1,0 +1,93 @@
+// Feature Item
+// ==========================
+//
+
+.feature-item {
+	width: 100%;
+	padding: $global-padding / 3 gutter() / 2;
+	margin-bottom: $global-margin / 2;
+	// margin-bottom: gutter();
+	background-color: $white;
+
+	&:hover {
+		.feature-item__icon {
+			box-shadow: 0 0px 0px 60px $primary-color inset;
+
+			svg {
+				fill: $white;
+			}
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.feature-item__icon {
+	margin: auto;
+	margin-bottom: $global-margin / 6;
+	display: block;
+	width: 90px;
+	height: 90px;
+	padding: $global-padding / 2;
+	border-radius: 100%;
+	box-shadow: 0 0px 0px 5px $primary-color inset;
+	transition: $global-transition;
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: $primary-color;
+		transition: $global-transition;
+	}
+
+	&:hover {
+		box-shadow: 0 0px 0px 60px $primary-color inset;
+
+		svg {
+			fill: $white;
+		}
+	}
+}
+
+.feature-item__name {
+	display: block;
+	margin: 0;
+	margin-bottom: $global-margin / 6;
+	font-family: inherit;
+	line-height: $heading-line-height;
+	font-weight: $global-weight-bold;
+	text-align: center;
+	font-size: 2.2rem;
+	text-transform: uppercase;
+	color: $dark-gray;
+}
+
+.feature-item__descr {
+	display: block;
+	margin: 0;
+	text-align: center;
+}
+
+@include breakpoint(small) {
+
+	.feature-item {
+		
+
+		&:last-child {
+			margin-bottom: $global-margin / 2;
+		}
+		
+	}
+
+	.feature-item__name {
+		font-size: 2.4rem;
+	}
+
+	.feature-item__icon {
+		width: 110px;
+		height: 110px;
+	}
+
+}

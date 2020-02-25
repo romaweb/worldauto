@@ -1,0 +1,23 @@
+// Heading
+// ==========================
+//
+
+@mixin heading {
+	margin: 0;
+	display: block;
+	font-family: $heading-font-family;
+	font-style: $heading-font-style;
+	font-weight: $heading-font-weight;
+	line-height: $heading-line-height;
+	text-rendering: $heading-text-rendering;
+}
+
+@mixin sub-heading {
+	margin: 0;
+	display: block;
+	font-family: $sub-heading-font-family;
+	font-style: $sub-heading-font-style;
+	font-weight: $sub-heading-font-weight;
+	line-height: $sub-heading-line-height;
+	text-rendering: $sub-heading-text-rendering;
+}

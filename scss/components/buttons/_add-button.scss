@@ -1,0 +1,40 @@
+// Add Button
+// ==========================
+//
+
+.add-btn {
+	display: flex;
+	align-items: center;
+
+	&:hover {
+		
+		.add-btn__icon {
+			background-color: $primary-color;
+		}
+
+		.add-btn__text {
+			color: $black;
+		}
+	}
+
+}
+
+.add-btn__icon {
+	flex: 0 0 auto;
+	display: block;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	margin-right: 10px;
+	border-radius: 100%;
+	font-size: 2.2rem;
+	text-align: center;
+	background-color: $success-color;
+	color: $white;
+	transition: $global-transition;
+}
+
+.add-btn__text {
+	color: $dark-gray;
+	transition: $global-transition;
+}

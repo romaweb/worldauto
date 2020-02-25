@@ -1,0 +1,79 @@
+// User Form
+// ==========================
+//
+
+.user-form {
+
+}
+
+.user-form__field-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: $global-margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.user-form__field {
+	width: span(12);
+	position: relative;
+
+
+	p {
+		width: 100%;
+		font-size: $small-font-size;
+		position: absolute;
+		bottom: -20px;
+		text-align: left;
+		color: $black;
+		margin: 0;
+	}
+
+	.help-block-error {
+		color: $error-color;
+	}
+
+}
+
+.user-form__input {
+	width: 100%;
+	margin-bottom: $global-margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.user-form__heading {
+	@include heading();
+	text-align: left;
+	margin-bottom: $global-margin / 3;
+	font-size: 2.2rem;
+}
+
+.user-form__text {
+	@include heading();
+	margin-bottom: $global-margin / 4;
+	font-size: 1.5rem;
+}
+
+
+@include breakpoint(small) {
+
+	.user-form__field-wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+
+	.user-form__input {
+		margin-bottom: 0;
+		flex: 0 1 auto;
+		width: span(6);
+	}
+
+}
+

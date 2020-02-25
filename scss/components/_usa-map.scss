@@ -1,0 +1,50 @@
+.usa-map {
+  width: 100%;
+  margin-bottom: $global-margin / 1.5;
+}
+
+.usa-map__territory {
+  fill: $light-gray;
+  stroke: $primary-color;
+  stroke-linejoin:round;
+  stroke-width:.75;
+}
+
+.usa-map__text {
+  @include sub-heading();
+  fill: $primary-color;
+}
+
+.usa-map__line {
+  fill: $primary-color;
+}
+
+.usa-map__port {
+  fill: $primary-color;
+}
+
+.usa-map__active-state {
+
+  .usa-map__territory {
+    fill: $primary-color;
+  }
+
+  .usa-map__text {
+    fill: $dark-gray;
+  }
+
+  .usa-map__line {
+    fill: $dark-gray;
+  }
+}
+
+.usa-map__active-port {
+
+  .usa-map__port {
+    fill: $dark-gray;  
+  }
+
+
+  
+}
+

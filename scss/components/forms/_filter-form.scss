@@ -1,0 +1,209 @@
+// .filter-form {
+//   display: block;
+// 	margin-bottom: $global-margin / 1.5;
+// 	padding: $global-padding / 3 gutter() / 2;
+//   background-color: $dark-gray;
+// }
+
+
+// .filter-form__heading {
+//   @include sub-heading();
+//   margin-bottom: $global-margin / 3;
+//   text-align: center;
+//   text-transform: uppercase;
+//   font-size: 2.2rem;
+//   color: $white;
+// }
+
+// .filter-form__field-wrap {
+//   margin-bottom: $global-margin / 1.5;
+
+// }
+
+
+// .filter-form__fields-container {
+//   display: flex;
+//   flex: 1 1 auto;
+// }
+
+// .filter-form__field-label {
+//   display: block;
+//   margin-bottom: $global-margin / 4;
+//   color: $white;
+//   line-height: 1;
+// }
+
+// .filter-form__custom-select {
+//   width: 50%;
+
+//   &:first-child {
+//     margin-right: gutter() / 2;
+//   }
+// }
+
+// .filter-form__input-field {
+//   width: 50%;
+
+//   &:first-child {
+//     margin-right: gutter() / 2;
+//   }
+// }
+
+// .filter-form__btn {
+//   width: 100%;
+// }
+
+// @include breakpoint(small) {
+
+//   .filter-form {
+//     padding: $global-padding / 2 gutter();
+//   }
+
+//   .filter-form__heading {
+//     font-size: 2.6rem;
+//   }
+  
+
+// }
+
+// @include breakpoint(large) {
+
+//   .filter-form {
+//     margin: 0;
+//   }
+  
+// }
+
+.filter-form {
+  // display: block;
+  display: none;
+	margin-bottom: $global-margin / 1.5;
+	padding: $global-padding / 3 gutter() / 2;
+  // background-color: $dark-gray;
+  background-color: $white;
+
+  &--active {
+    display: block;
+  }
+}
+
+
+.filter-form__heading {
+  @include sub-heading();
+  margin-bottom: $global-margin / 3;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  color: $dark-gray;
+}
+
+.filter-form__fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: $global-margin / 1.5;
+  padding-bottom: $global-padding / 1.5;
+  border: none;
+  border-bottom: 1px solid $global-border-color;
+
+  &:last-of-type {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: $global-margin;
+  }
+
+}
+
+.filter-form__legend {
+  display: block;
+  margin-bottom: $global-margin / 4;
+  color: $dark-gray;
+  line-height: 1;
+
+  &--toggle {
+    position: relative;
+    padding-left: 20px;
+    margin: 0;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include triangle(right, 12px, 7px, $medium-gray);
+      transition: $global-transition;
+    }
+
+  }
+
+  &--opened {
+    // margin-bottom: $global-margin / 4;
+    
+    &::before {
+      transform: rotate(90deg);
+    }
+
+  }
+  
+}
+
+.filter-form__fieldset-container {
+  padding-top: $global-padding / 4;
+}
+
+.filter-form__fields-container {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.filter-form__custom-checkbox {
+  margin-bottom: $global-margin / 4;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+// .filter-form__custom-select {
+//   width: 50%;
+
+//   &:first-child {
+//     margin-right: gutter() / 2;
+//   }
+// }
+
+.filter-form__input-field {
+  width: 50%;
+
+  &:first-child {
+    margin-right: gutter() / 2;
+  }
+}
+
+// .filter-form__btn {
+//   width: 100%;
+// }
+
+
+
+@include breakpoint(small) {
+
+  .filter-form {
+    padding: $global-padding / 2 gutter();
+  }
+
+  .filter-form__heading {
+    font-size: 2.6rem;
+  }
+  
+
+}
+
+@include breakpoint(large) {
+
+  .filter-form {
+    margin: 0;
+    display: block;
+  }
+
+  
+}

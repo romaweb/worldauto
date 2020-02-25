@@ -1,0 +1,181 @@
+.usa-calc-result {
+  position: relative;
+  padding: $global-padding 0;
+  background: $light-gray;
+}
+
+.usa-calc-result__decorative {
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 65px;
+  position: absolute;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 40px;
+    bottom: 19px;
+    background-color: $primary-color;
+    left: -80px;
+    box-shadow: 4px 1px 0 2px $light-gray;
+    transform: skew(-58deg, 10deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 40px;
+    bottom: 19px;
+    background-color: $primary-color;
+    right: -80px;
+    box-shadow: -4px 1px 0 2px $light-gray;
+    transform: skew(58deg, -10deg);
+  }
+
+}
+
+.usa-calc-result__wrap {
+  @include container();
+}
+
+.usa-calc-result__car-content {
+  max-width: 400px;
+  margin: auto;
+  display: block;
+  margin-bottom: $global-margin / 1.5;
+}
+
+.usa-calc-result__car-img {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+  margin-bottom: $global-margin / 6;
+  width: 100%;
+
+
+  img {
+    @include responsive-img();
+  }
+}
+
+.usa-calc-result__car-name {
+  @include sub-heading();
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  color: $dark-gray;
+  text-align: center;
+}
+
+.usa-calc-result__btn {
+
+  margin-top: $global-margin / 1.5;
+}
+
+@include breakpoint(small) {
+
+  .usa-calc-result {
+    padding: $global-padding * 1.5 0;
+  }
+
+  .cars-page__decorative {
+    top: -26px;
+    height: 82px;
+  
+    &::before {
+      content: '';
+      width: 160px;
+      height: 50px;
+      bottom: 20px;
+      left: -70px;
+    }
+  
+    &::after {
+      width: 160px;
+      height: 50px;
+      bottom: 20px;
+      right: -70px;
+    }
+
+  }
+
+  .usa-calc-result__wrap {
+    @include container(768px);
+  }
+
+  .usa-calc-result__car-content {
+    max-width: 620px;
+  }
+
+  .usa-calc-result__car-name {
+    font-size: 3rem;
+  }
+
+}
+
+@include breakpoint(medium) {
+
+  .usa-calc-result__field-wrap {
+
+    label {
+      font-size: 1.6rem;
+    }
+  }
+
+  .usa-calc-result__results-table {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+
+  .usa-calc-result__results-table-item {
+    width: 50%;
+  }
+
+  // .usa-calc-result__car-name {
+  //   font-size: 3.8rem;
+  // }
+
+}
+
+@include breakpoint(large) {
+
+  .usa-calc-result__wrap {
+    @include container(1200px);
+  }
+
+  .usa-calc-result__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .usa-calc-result__usa-map {
+    width: span(7);
+  }
+
+  .usa-calc-result__car-content {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    width: span(5);
+  }
+
+  .usa-calc-result__car-name {
+    text-align-last: left;
+  }
+}
+
+@include breakpoint(xlarge) {
+
+  .usa-calc-result {
+    padding: $global-padding * 2 0;
+  }
+
+}

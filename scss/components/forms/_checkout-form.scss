@@ -1,0 +1,97 @@
+// Checkout Form
+// ==========================
+//
+
+.checkout-form {
+	margin-bottom: $global-margin * 1.5;
+}
+
+.checkout-form__field-wrap {
+	margin-bottom: $global-margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.checkout-form__field {
+	width: span(12);
+	position: relative;
+	// display: flex;
+	// align-items: center;
+	// justify-content: space-between;
+	// margin-bottom: $global-margin;
+
+	
+
+	p {
+		width: 100%;
+		font-size: $small-font-size;
+		position: absolute;
+		bottom: -20px;
+		text-align: left;
+		color: $black;
+		margin: 0;
+	}
+
+	.help-block-error {
+		color: $error-color;
+	}
+
+}
+
+
+
+.checkout-form__heading {
+	@include heading();
+	text-align: left;
+	margin-bottom: $global-margin / 3;
+	font-size: 2.2rem;
+}
+
+.checkout-form__lnk {
+	color: $primary-color;
+	transition: $global-transition;
+
+	&:hover {
+		color: $black;
+	}
+}
+
+.checkout-form__text {
+	margin: 0;
+	margin-bottom: $global-margin / 2;
+}
+
+.checkout-form__input {
+	margin-bottom: $global-margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+@include breakpoint(small) {
+
+	.checkout-form__field-wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+
+	.checkout-form__input {
+		margin-bottom: 0;
+		flex: 0 1 auto;
+		width: span(6);
+	}
+
+}
+
+@include breakpoint(medium) {
+	
+	.checkout-form {
+		margin-bottom: 0;
+	}
+
+}

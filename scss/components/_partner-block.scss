@@ -1,0 +1,52 @@
+// Partner Block
+// ==========================
+//
+
+.partner-block {
+  margin-bottom: $global-margin;
+	border: 1px solid $global-border-color;
+	// background-color: $white;
+	// background-color: $secondary-color;
+}
+
+.partner-block__img {
+  display: block;
+  padding: $global-padding / 2 gutter() / 2;
+  background-color: $secondary-color;
+  transition: $global-transition;
+  
+
+	img {
+		@include responsive-img();
+  }
+  
+  &:hover {
+    background-color: $secondary-accent-color;
+  }
+}
+
+.partner-block__text {
+	padding: $global-padding / 2 gutter() / 2;
+	background-color: $white;
+}
+
+
+@include breakpoint(xsmall) {
+
+  .partner-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .partner-block__img {
+    width: span(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .partner-block__text {
+    width: span(50%);
+
+  }
+}

@@ -1,0 +1,44 @@
+// Payment
+// ==========================
+//
+
+.payment {
+	@include reset-list();
+	display: flex;
+	flex-wrap: wrap;
+	align-items: top;
+}
+
+.payment__item {
+	display: block;
+	margin-right: gutter() / 3;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.payment__item-lnk {
+	display: block;
+	// padding: $global-padding / 10;
+	// background-color: $primary-color;
+	width: 55px;
+	height: 40px;
+	// border-radius: $global-radius;
+	// border-radius: 100%;
+	// box-shadow: $global-shadow;
+  
+  
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: $secondary-color;
+	}
+
+	&:hover {
+		svg {
+      fill: $third-color;
+      transition: $global-transition;
+    }
+	}
+}

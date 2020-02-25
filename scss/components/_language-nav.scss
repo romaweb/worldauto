@@ -1,0 +1,47 @@
+// Language Navigation
+// ==========================
+//
+
+.language-nav {
+	@include reset-list();
+	// margin-top: auto;
+	display: flex;
+	margin-bottom: $global-margin / 2;
+}
+
+.language-nav__item {
+	flex: 0 1 auto;
+	margin-right: 15px;
+
+	a {
+		display: block;
+		padding: 5px 8px;
+		border: 1px solid $black;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $black;
+		font-weight: $global-weight-bold;
+		cursor: pointer;
+		transition: $global-transition;
+
+		&:hover {
+			color: $white;
+			background-color: $black;
+		}
+	}
+
+	&--active {
+
+		a {
+			color: $white;
+			background-color: $black;
+		}
+	}
+}
+
+@include breakpoint(small) {
+
+	.language-nav {
+		margin-bottom: $global-margin;
+	}
+}

@@ -1,0 +1,141 @@
+
+.car-nav {
+  width: 100%;
+  position: relative;
+  padding: $global-padding 0;
+  background: rgba($dark-gray, .6);
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   display: block;
+  //   left: 0;
+  //   right: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   z-index: -1;
+  //   background-size: cover;
+  //   background: $black url("../img/car-nav-bg.jpg") center center no-repeat;
+  // }
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: $black url("../img/car-nav-bg.jpg") center center no-repeat;
+    background-size: cover;
+  }
+}
+
+.car-nav__decorative {
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 65px;
+  position: absolute;
+  overflow: hidden;
+
+    &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 40px;
+    bottom: 19px;
+    background-color: $primary-color;
+    left: -80px;
+    box-shadow: 4px 1px 0 2px $white;
+    transform: skew(-58deg, 10deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 40px;
+    bottom: 19px;
+    background-color: $primary-color;
+    right: -80px;
+    box-shadow: -4px 1px 0 2px $white;
+    transform: skew(58deg, -10deg);
+  }
+
+}
+
+.car-nav__wrap {
+  @include container(420px);
+}
+
+@include breakpoint(small) {
+
+  .car-nav {
+    padding: $global-padding * 1.5 0;
+  }
+
+  .car-nav__decorative {
+    // top: -38px;
+    // height: 115px;
+    // top: -32px;
+    top: -26px;
+    height: 82px;
+    // background-color: rgba(red, .8);
+  
+    &::before {
+      content: '';
+      // width: 200px;
+      // height: 70px;
+      // bottom: 25px;
+      // left: -70px;
+      width: 160px;
+      height: 50px;
+      bottom: 20px;
+      left: -70px;
+    }
+  
+    &::after {
+      width: 160px;
+      height: 50px;
+      bottom: 20px;
+      right: -70px;
+    }
+  
+  }
+
+  .car-nav__wrap {
+    @include container(480px);
+    // display: flex;
+    // justify-content: space-between;
+  }
+
+
+}
+
+
+@include breakpoint(medium) {
+
+  .car-nav__wrap {
+    @include container(1200px);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+   .car-nav__car-nav-item {
+    width: span(6);
+  }
+
+}
+
+@include breakpoint(xlarge) {
+
+  
+  .car-nav {
+    padding: $global-padding * 2 0;
+  }
+
+}

@@ -1,0 +1,89 @@
+// Gallery Item
+// ==========================
+//
+
+// .gallery-item {
+// 	display: block;
+// 	text-decoration: none;
+// 	position: relative;
+
+// 	img {
+// 		@include responsive-img();
+// 	}
+
+// 	&:after {
+// 		content: '';
+// 		position: absolute;
+// 		z-index: 1;
+// 		display: block;
+// 		left: 0;
+// 		top: 0;
+// 		bottom: 0;
+// 		right: 0;
+// 		background-color: rgba($secondary-accent-color, .35);
+// 		transition: $global-transition;
+// 	}
+
+// 	&:hover {
+
+// 		&:after {
+// 			background-color: rgba($secondary-accent-color, .9)
+// 		}
+// 	}
+
+// }
+
+// .gallery-item__name {
+// 	@include sub-heading();
+// 	@include center-y();
+// 	width: 100%;
+// 	z-index: 2;
+// 	padding: $global-padding / 4 gutter();
+// 	text-decoration: none;
+// 	text-transform: uppercase;
+// 	font-size: 2rem;
+// 	text-align: center;
+// 	text-shadow: 1px 1px $medium-gray;
+// 	color: $white;
+// }
+
+// @include breakpoint(small) {
+
+// 	.gallery-item__name {
+// 		font-size: 2.2rem;
+// 	}
+
+// }
+
+// .gallery-item {
+// 	display: block;
+// 	text-decoration: none;
+// 	position: relative;
+
+// 	img {
+// 		@include responsive-img();
+// 	}
+
+// 	&:after {
+// 		content: '';
+// 		position: absolute;
+// 		z-index: 1;
+// 		display: block;
+// 		left: 0;
+// 		top: 0;
+// 		bottom: 0;
+// 		right: 0;
+// 		transition: $global-transition;
+// 	}
+
+// 	&:hover {
+
+// 		&:after {
+// 			background-color: rgba($secondary-accent-color, .3)
+// 		}
+// 	}
+
+// }
+
+
+

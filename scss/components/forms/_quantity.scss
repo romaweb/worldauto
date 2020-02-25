@@ -1,0 +1,43 @@
+// Quantity
+// ==========================
+//
+
+.quantity {
+	display: flex;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+	
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.quantity__field {
+	@include input-field();
+	appearance: none;
+	width: 40px;
+	font-size: 1.6rem;
+	text-align: center;
+}
+
+.quantity__btn {
+	@include btn();
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 1.8rem;
+	border-radius: 100%;
+	background-color: $medium-gray;
+	color: $white;
+	transition: $global-transition;
+
+	&:hover {
+		background-color: $primary-color;
+	}
+}
+
+
+

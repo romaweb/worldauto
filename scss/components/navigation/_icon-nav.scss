@@ -1,0 +1,99 @@
+// Icon Nav
+//==========================
+//
+
+.icon-nav {
+	@include reset-list;
+	display: flex;
+	width: 100%;
+	position: fixed;
+	z-index: 9;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $dark-gray;
+}
+
+.icon-nav__item {
+	flex: 1 1 auto;
+	border-right: 1px solid $medium-gray;
+
+	&:last-child {
+		border-right: 0;
+	}
+}
+
+.icon-nav__lnk {
+	padding: 15px 0;
+	display: block;
+	text-align: center;
+
+	&:hover {
+
+		svg {
+			fill: $primary-color;
+		}
+
+		// .icon-nav__counter {
+		// 	color: $primary-color;
+		// }
+	}
+}
+
+.icon-nav__icon {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: $white;
+		transition: $global-transition;
+	}
+}
+
+.icon-nav__counter {
+	position: absolute;
+	padding: 0 2px;
+	min-width: 20px;
+	top: -11px;
+	left: 15px;
+	color: $white;
+	text-align: center;
+	font-size: 1rem;
+	background-color: $primary-color;
+	
+	border-radius: $global-radius / 4;
+	transition: $global-transition;
+}
+
+@include breakpoint(medium) {
+
+	.icon-nav {
+		position: static;
+		width: auto;
+		background-color: transparent;
+	}
+
+	.icon-nav__item {
+		flex: 0 1 auto;
+		border-right: none;
+		margin-right: $global-margin / 2;
+	}
+
+	// .icon-nav__counter {
+	// 	color: $black;
+	// }
+
+	.icon-nav__icon {
+		width: 25px;
+		height: 25px;
+
+		svg {
+			fill: $black;
+		}
+	}
+	
+}

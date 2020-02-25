@@ -1,0 +1,84 @@
+// Additional Nav
+// ==========================
+//
+
+.additional-nav {
+	width: 100%;
+	margin-bottom: $global-margin;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.additional-nav__heading {
+  @include sub-heading();
+	margin-bottom: $global-margin / 2;
+	font-size: 2.2rem;
+	color: $secondary-color;
+	text-transform: uppercase;
+}
+
+.additional-nav__list {
+	@include reset-list();
+}
+
+.additional-nav__item {
+	display: block;
+	margin-bottom: $global-margin / 4;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.additional-nav__lnk {
+	display: flex;
+  align-items: center;
+	text-decoration: none;
+	
+	&:hover {
+  
+    .additional-nav__lnk-icon {
+      transform: translateX(5px);
+
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: $primary-accent-color;
+      }
+    }
+
+    .additional-nav__lnk-text {
+      color: $primary-accent-color;
+    }
+  } 
+}
+
+.additional-nav__lnk-text {
+  display: block;
+  color: $white;
+  margin-right: gutter() / 3;
+  transition: $global-transition;
+}
+
+.additional-nav__lnk-icon {
+  display: block;
+  height: 15px;
+  width: 15px;
+  transition: $global-transition;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: $medium-gray;
+  }
+}
+
+@include breakpoint(xsmall) {
+
+	.additional-nav {
+    margin-bottom: 0;
+  }
+
+}

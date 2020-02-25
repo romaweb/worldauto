@@ -1,0 +1,117 @@
+// Beat Pro Item
+// ==========================
+//
+
+.beat-pro-item {
+  margin-bottom: $global-margin;
+}
+
+.beat-pro-item__discipline {
+  @include sub-heading();
+  display: inline-block;
+  padding: $global-padding / 10 gutter() / 2;
+  color: $white;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  background-color: $secondary-color;
+}
+
+.beat-pro-item__heading {
+  text-align: left;
+  margin-bottom: $global-margin / 2;
+  padding: 0;
+}
+
+.beat-pro-item__cards-container {
+  max-width: 380px;
+  margin: auto;
+}
+
+.beat-pro-item__athlete-card {
+  position: relative;
+}
+
+.beat-pro-item__card-separator {
+  // @include center-x();
+  position: absolute;
+  left: 0;
+  right: 0;
+  @include heading();
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  text-align: center;
+  // right: -29px;
+  color: $secondary-accent-color;
+}
+
+.beat-pro-item__athlete-winner {
+  @include heading();
+  @include center-x();
+  width: 100%;
+  bottom: $global-padding / 3;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: $primary-color;
+  text-align: center;
+  text-shadow: -1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white;
+}
+
+.beat-pro-item__text {
+  margin-bottom: $global-margin / 1.5;
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@include breakpoint(small) {
+
+  .beat-pro-item__discipline {
+    font-size: 2rem;
+  }
+
+  .beat-pro-item__athlete-winner {
+    font-size: 5rem;
+  }
+
+}
+
+@include breakpoint(medium) {
+
+  .beat-pro-item__cards-container {
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .beat-pro-item__athlete-card {
+    width: span(4);
+    margin-right: gutter();
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .beat-pro-item__card-separator {
+    @include center-y();
+    text-align: right;
+    
+  //   @include heading();
+  //   text-transform: uppercase;
+  //   font-size: 3.6rem;
+    right: -29px;
+  //   color: $secondary-accent-color;
+  }
+  
+
+}
+
+@include breakpoint(xlarge) {
+
+  .beat-pro-item__athlete-winner {
+    font-size: 6rem;
+  }
+
+}

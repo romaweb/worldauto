@@ -1,0 +1,160 @@
+// Forum Post
+// ==========================
+
+.forum-post {
+	margin-bottom: $global-margin;
+	background-color: $light-gray;
+	padding: $global-padding / 4 gutter();
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&--reply {
+		margin-left: gutter();
+
+		.forum-post__author,
+		.forum-post__pub-date {
+			margin-bottom: 0;
+		}
+
+	}
+}
+
+
+.forum-post__heading {
+	display: block;
+	font-weight: $global-weight-bold;
+	line-height: $heading-line-height;
+	color: $primary-color;
+	font-size: 2rem;
+	margin-bottom: $global-margin / 2;
+
+	&:hover {
+		color: $medium-beige;
+		text-decoration: none;
+	}
+}
+
+.forum-post__descr {
+	margin-bottom: $global-margin / 2;
+
+	p {
+		margin: 0;
+		margin-bottom: $global-margin / 4;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.forum-post__info {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.forum-post__author {
+	position: relative;
+	width: span(6);
+	flex: 0 1 auto;
+	display: flex;
+	margin-bottom: $global-margin / 4;
+	margin-right: gutter();
+	color: $medium-beige;
+
+	span {
+		flex: 0 1 auto;
+	}
+
+	&:after {
+		 content:attr(data-description);
+		 display: block;
+		 position: absolute;
+		 padding: 0 8px;
+		 width: 80px;
+		 background-color: $dark-beige;
+		 color: $white;
+		 border-radius: $global-radius;
+		 font-size: $small-font-size;
+		 top: -90%;
+		 left: 20px;
+		 opacity: 0;
+		 text-align: center;
+		 transition: $global-transition;
+	}
+
+	&:hover:after {
+		top: -100%;
+		opacity: 1;
+	}
+}
+
+.forum-post__pub-date {
+	width: span(6);
+	flex: 0 1 auto;
+	display: flex;
+	margin-bottom: $global-margin / 4;
+	color: $medium-beige;
+
+	time {
+		flex: 0 1 auto;
+	}
+}
+
+.forum-post__info-icon {
+	flex: 0 1 auto;
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+	fill: $light-beige;
+
+	&--theme {
+		fill: $primary-color;
+	}
+}
+
+.forum-post__reply {
+	flex: 0 1 auto;
+	display: flex;
+	align-items: center;
+	color: $medium-beige;
+
+	&:hover {
+		color: $primary-color;
+	}
+
+	span {
+		flex: 0 1 auto;
+	}
+
+}
+
+@include breakpoint(xsmall) {
+
+	.forum-post__pub-date {
+		width: auto;
+		margin-bottom: 0;
+	}
+
+	.forum-post__author {
+		width: auto;
+		margin-bottom: 0;
+	}
+
+	.forum-post__reply {
+		width: auto;
+		margin-left: auto;
+	}
+}
+
+@include breakpoint(small) {
+
+	.forum-post {
+		margin-bottom: $global-margin * 1.5;
+	}
+
+	.forum-post__heading {
+		font-size: 2.2rem;
+	}
+}

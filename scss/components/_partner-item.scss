@@ -1,0 +1,19 @@
+// Partner Item
+// ==========================
+//
+
+.partner-item {
+  display: block;
+  width: 100%;
+  margin-bottom: $global-margin / 2;
+  opacity: .75;
+  transition: $global-transition;
+
+  img {
+    @include responsive-img();
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

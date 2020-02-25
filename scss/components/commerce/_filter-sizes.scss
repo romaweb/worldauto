@@ -1,0 +1,55 @@
+// Filter Sizes
+// ==========================
+//
+
+.filter-sizes {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.filter-sizes__item {
+	// height: 30px;
+	// width: 30px;
+	display: block;
+	margin-right: $global-margin / 4;
+	margin-bottom: $global-margin / 4;
+	
+
+	input {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+
+
+		&:checked + label {
+			background-color: $primary-color;
+		}
+	}
+
+	input + label {
+		cursor: pointer;
+		// height: 100%;
+		// width: 100%;
+		height: 30px;
+		padding: 0 $global-padding / 10;
+		width: 60px;
+		display: block;
+		border-radius: $global-radius;
+		text-align: center;
+		line-height: 30px;
+		color: $white;
+		background-color: $medium-gray;
+		transition: $global-transition;
+	}
+
+	// label:after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	@include center-xy();
+	// 	display: block;
+	// 	width: 26px;
+	// 	height: 26px;
+	// 	border: 2px solid $medium-gray;
+	// 	border-radius: 100%;
+	// }
+}

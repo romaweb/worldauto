@@ -1,0 +1,44 @@
+// Custom Select
+// ==========================
+//
+
+.custom-select {
+	position: relative;
+	width: 100%;
+
+	select {
+		@include input-field();
+		background-color: $light-gray;
+		padding:  $global-padding / 3.5  gutter() / 3; 
+		border-bottom: 2px solid $dark-gray;
+		resize: none;
+		color: inherit;
+		appearance: none;
+		-webkit-appearance: none;
+
+	
+		&:focus {
+			border-color: $primary-color;
+		}
+	}
+
+
+	&:after {
+		content: '';
+		@include triangle(bottom, 7px, 5px, $black);
+		@include center-y();
+		right: gutter() / 3;
+	}
+}
+
+@include breakpoint(small) {
+
+	.custom-select {
+
+		select {
+			padding:  $global-padding / 3 gutter() / 2;
+		}
+	}
+
+}
+

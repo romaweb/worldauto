@@ -1,0 +1,23 @@
+// Buttons
+// ==========================
+//
+
+@mixin btn {
+	box-sizing: border-box;
+	display: table;
+	border: none;
+	outline: none;
+	vertical-align: middle;
+	text-align: center;
+	// white-space: wrap;
+	text-decoration: none;
+	line-height: 1;
+	-webkit-appearance: none;
+	cursor: pointer;
+	
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+	
+}

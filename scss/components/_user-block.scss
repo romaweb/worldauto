@@ -1,0 +1,42 @@
+// User Block
+// ==========================
+//
+
+.user-block {
+	@include reset-list();
+	margin-bottom: $global-margin / 2;
+	display: flex;
+}
+
+.user-block__item {
+	display: block;
+	margin-right: 25px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.user-block__lnk {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.user-block__icon {
+	display: block;
+	width: 17px;
+	height: 17px;
+	margin-right: 5px;
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: $white;
+	}
+}
+
+.user-block__text {
+	display: block;
+}
+

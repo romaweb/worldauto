@@ -1,0 +1,74 @@
+// Top Players
+// ==========================
+//
+
+.top-players {
+  width: 100%;
+}
+
+.top-players__heading {
+  @include sub-heading();
+  padding: $global-padding / 4 gutter() / 2;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  background-color: $primary-color;
+}
+
+.last-events__item {
+  align-items: center;
+  padding: $global-padding / 4 gutter() / 2;
+  border-bottom: 1px solid $global-border-color;
+
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.last-events__item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.last-events__team {
+  width: span(5);
+  flex: 0 1 auto;
+}
+
+.last-events__team-name {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: $global-weight-bold;
+}
+
+.last-events__score {
+  @include heading();
+  text-align: center;
+  color: $secondary-color;
+  font-size: 5.2rem;
+  // background-color: $primary-accent-color;
+}
+.last-events__separator {
+  margin: 0 gutter() / 2;
+  @include sub-heading();
+  font-size: 3rem;
+}
+
+.last-events__item-date {
+  text-align: center;
+  font-size: 1.8rem;
+  color: $medium-gray;
+  
+}
+// .upcomming-events__team-name {
+//   flex: 0 1 auto;
+//   font-size: 2rem;
+//   font-weight: $global-weight-bold;
+// }
+
+// .upcomming-events__separator {
+//   margin: 0 gutter() / 2;
+// }

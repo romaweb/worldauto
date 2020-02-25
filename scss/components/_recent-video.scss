@@ -1,0 +1,52 @@
+// Recent Video
+// ==========================
+//
+
+.recent-video {
+
+}
+
+.recent-video__item {
+	margin-bottom: $global-margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.recent-video__heading {
+	display: block;
+	font-weight: $global-weight-bold;
+	line-height: $heading-line-height;
+	color: $medium-beige;
+	font-size: 2rem;
+	margin-bottom: $global-margin / 2;
+
+	&:hover {
+		color: $primary-color;
+		text-decoration: none;
+	}
+}
+
+.recent-video__wrap {
+	margin: 0;
+	padding: 0;
+	@include responsive-video();
+}
+
+@include breakpoint(small) {
+	
+	.recent-video {
+		flex: 0 1 auto;
+		width: span(5);
+	}
+
+	.recent-video__item {
+		margin-bottom: $global-margin * 1.5;
+	}
+
+	.resent-video__heading {
+		font-size: 2.2rem;
+	}
+
+}

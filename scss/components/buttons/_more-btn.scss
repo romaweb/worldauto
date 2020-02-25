@@ -1,0 +1,48 @@
+// More Btn
+//==========================
+//
+
+.more-btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  &:hover {
+  
+    .more-btn__icon {
+      transform: translateX(5px);
+
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: $primary-accent-color;
+      }
+    }
+
+    .more-btn__text {
+      color: $primary-accent-color;
+    }
+  } 
+}
+
+.more-btn__text {
+  font-family: $sub-heading-font-family;
+  display: block;
+  color: $primary-color;
+  text-transform: uppercase;
+  margin-right: gutter() / 3;
+  transition: $global-transition;
+}
+
+.more-btn__icon {
+  display: block;
+  height: 15px;
+  width: 15px;
+  transition: $global-transition;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: $primary-color;
+  }
+}
