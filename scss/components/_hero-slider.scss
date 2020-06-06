@@ -80,7 +80,7 @@
   }
   to {
     //old scale 1.3
-    transform: scale(1.15) translate(0px);
+    transform: scale(1.1) translate(0px);
   }
 }
 
@@ -149,7 +149,7 @@
   }
 
   .hero-slider__heading {
-    font-size: 6rem;
+    font-size: 5.4rem;
   }
 
   .hero-slider__caption {
@@ -161,7 +161,8 @@
 @include breakpoint(large) {
 
   .hero-slider__heading {
-    font-size: 7.2rem;
+    // font-size: 7.2rem;
+    font-size: 5.6rem;
   }
 
   .hero-slider__item {
